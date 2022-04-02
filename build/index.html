@@ -13,7 +13,6 @@
 <body>
   <div class="wrapper">
     <header class="header">
-      <!-- <div class="header__wrapper container"> -->
       <nav class="header__navigation container">
         <div class="header__logo">
           <svg class="header__logo-image" width="55" height="55">
@@ -24,7 +23,6 @@
             <p>умные технологии</p>
           </div>
         </div>
-        <!-- список -->
         <ul class="header__links">
           <li>
             <a href="#">
@@ -41,13 +39,15 @@
         </ul>
         <button type="button">Заказать звонок</button>
       </nav>
-      <div class="header__title">
+    </header>
+
+    <section class="header-image">
+      <div class="header-image__title">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
         <a href="#">Получить бесплатную консультацию</a>
       </div>
-      <!-- </div> -->
-    </header>
+    </section>
     <main>
       <section class="features">
         <h2 class="visually-hidden">Наши преимущества</h2>
@@ -112,6 +112,43 @@
             </div>
             <button class="promo__button" type="button">Подробнее</button>
           </div>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="catalog-wrapper container">
+          <h2 class="catalog__title">Smart Device предлагает следующие товары и услуги</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="#">
+                <picture>
+                  <source media="(max-width: 1564px)" srcset="img/image1-tablet.jpg 1x, img/image1-tablet@2x.jpg 2x">
+                  <img src="img/image1-desk.jpg" srcset="img/image1-desk@2x.jpg 2x"
+                    alt="Изображение фрагмента системной платы">
+                </picture>
+                <p>Производство<br class="catalog__breake"> печатных плат</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="#">
+                <picture>
+                  <source media="(max-width: 1564px)" srcset="img/image2-tablet.jpg 1x, img/image2-tablet@2x.jpg 2x">
+                  <img src="img/image2-desk.jpg" srcset="img/image2-desk@2x.jpg 2x"
+                    alt="Изображение фрагмента системной платы">
+                </picture>
+                <p>Монтаж печатных<br class="catalog__breake"> плат</p>
+              </a>
+            </li>
+            <li class="catalog__item">
+              <a href="#">
+                <picture>
+                  <source media="(max-width: 1564px)" srcset="img/image3-tablet.jpg 1x, img/image3-tablet@2x.jpg 2x">
+                  <img src="img/image3-desk.jpg" srcset="img/image3-desk@2x.jpg 2x"
+                    alt="Изображение фрагмента системной платы">
+                </picture>
+                <p>Комплектующие<br class="catalog__breake"> для светотехники</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>

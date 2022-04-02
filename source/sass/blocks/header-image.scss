@@ -1,0 +1,66 @@
+.header-image {
+  background-image: url(../img/background-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(880px - (1920px - 100vw)/(1920 - 770)*(880 - 640));
+  padding-top: calc(305px - (1920px - 100vw)/(1920 - 770)*(305 - 180));
+
+  @include retina {
+    background-image: url(../img/background-header@2x.jpg);
+  }
+}
+
+.header-image__title {
+  padding-left: calc(475px - (1920px - 100vw)/(1920 - 770)*(475 - 50));
+}
+
+.header-image__title h2 {
+  @include font(80px, 94px, 700, $color-lightgray);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin: 0 0 calc(35px - (1920px - 100vw)/(1920 - 770)*(35 - 0));
+
+  @include vp-1919 {
+    font-size: calc(80px - (1920px - 100vw)/(1920 - 770)*(80 - 64));
+    line-height: calc(94px - (1920px - 100vw)/(1920 - 770)*(94 - 75));
+  }
+}
+
+.header-image__title p {
+  @include font(22px, 155%, 400, $color-lightgray);
+  letter-spacing: 0.12em;
+  width: 600px;
+  margin: 0 0 63px;
+
+  @include vp-1279 {
+    width: 670px;
+    margin-bottom: 73px;
+  }
+}
+
+.header-image__title a {
+  @include font(18px, 21px, 700, $color-lightgray);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 18px 25px;
+  background-color: $color-lightblue;
+
+  @include vp-1023 {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: $vp-770) {
+  .header-image {
+    background-image: url(../img/background-header1.jpg);
+
+    @include retina {
+      background-image: url(../img/background-header1@2x.jpg);
+
+      @include vp-769 {
+        height: calc(640px - (770px - 100vw)/(770 - 320)*(640 - 560));
+      }
+    }
+  }
+}
