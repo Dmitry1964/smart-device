@@ -1,0 +1,56 @@
+.promo {
+  padding-bottom: 50px;
+}
+
+.promo__content {
+  padding-left: calc(250px - (1920px - 100vw)/(1920 - 779)*(250 - 179));
+  background-image: url(../../img/image-2022.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-bottom: 50px;
+}
+
+.promo__content h2 {
+  @include font(36px, 51px, 400, $color-dark);
+  margin: 0 0 15px;
+}
+
+.promo__description {
+  margin-bottom: calc(42px - (1920px - 100vw)/(1920 - 770)*42);
+}
+
+.promo__description p {
+  @include font(16px, 22px, 400, $color-dark);
+  font-family: $second-font;
+  margin: 0 0 15px;
+}
+
+.promo__content-hidden {
+  display: none;
+}
+
+.promo__button {
+  @include font(14px, 16px, 700, $color-lightblue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 180px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  background: transparent;
+  border: 1px solid $color-lightblue;
+  border-radius: 3px;
+}
+
+@media (max-width: $vp-770) {
+  .promo__content h2 {
+    margin-bottom: 15px;
+  }
+
+  .promo__description p {
+    margin-bottom: 15px;
+  }
+
+  .promo__description {
+    margin: 0;
+  }
+}
