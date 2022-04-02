@@ -1,0 +1,113 @@
+.features {
+  padding-top: calc(120px - (1920px - 100vw)/(1920 - 770)*(120 - 80));
+  padding-bottom: calc(125px - (1920px - 100vw)/(1920 - 770)*(125 - 80));
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features__item {
+  padding: 95px 45px 35px;
+  min-height: calc(300px - (1920px - 100vw)/(1920 - 770)*(300 - 360));
+  border: 1px solid $color-gray;
+  background-repeat: no-repeat;
+  background-position: 45px 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $color-lightblue;
+  }
+
+  &:nth-child(5n+1) {
+    background-image: url(../img/svg/stopwatch.svg);
+  }
+
+  &:nth-child(5n+2) {
+    background-image: url(../img/svg/hired.svg);
+  }
+
+  &:nth-child(5n+3) {
+    background-image: url(../img/svg/detective.svg);
+  }
+
+  &:nth-child(5n+4) {
+    background-image: url(../img/svg/tag.svg);
+  }
+}
+
+.features__item:hover {
+
+  &::before {
+    width: 100%;
+    z-index: -10;
+    transition: width 0.3s;
+  }
+
+  &:nth-child(5n+1) {
+    background-image: url(../img/svg/stopwatch-hover.svg);
+  }
+
+  &:nth-child(5n+2) {
+    background-image: url(../img/svg/hired-hover.svg);
+  }
+
+  &:nth-child(5n+3) {
+    background-image: url(../img/svg/detective-hover.svg);
+  }
+
+  &:nth-child(5n+4) {
+    background-image: url(../img/svg/tag-hover.svg);
+  }
+}
+
+.features__item h3 {
+  @include font(24px, 140%, 400, $color-lightblue);
+  margin: 0 0 15px;
+}
+
+.features__item:hover h3,
+.features__item:hover p {
+  color: $color-lightgray;
+}
+
+.features__item p {
+  @include font(16px, 135%, 400, $color-dark);
+  font-family: $second-font;
+  margin: 0;
+}
+
+@media (max-width: $vp-770) {
+  .features {
+    padding-top: 77px;
+  }
+
+  .features__item {
+    height: 360px;
+  }
+
+  .features__item h3 {
+    @include font(24px, 34px, 400, $color-lightblue);
+    margin-bottom: 7px;
+  }
+
+  .features__item:nth-child(5n+3) {
+    padding-top: 90px;
+  }
+
+  .features__item:nth-child(5n+4) {
+    padding-top: 88px;
+  }
+}
