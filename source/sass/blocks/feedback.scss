@@ -1,17 +1,21 @@
 .feedback {
   // background-image: url(../../img/background-feedback.jpg);
-  padding-top: calc(165px - (1920px - 100vw)/(1920 - 770)*(165 - 50));
-  // padding-bottom: calc(250px - (1920px - 100vw)/(1920 - 770)*(250 - 125));
+  padding-top: calc(165px - (1920px - 100vw)/(1920 - 770)*(165 - 44));
+  padding-bottom: calc(250px - (1920px - 100vw)/(1920 - 770)*(250 - 125));
   background-color: $color-lightblue;
   background-repeat: no-repeat;
-  height: 840px;
+  height: calc(840px - (1920px - 100vw)/(1920 - 770)*(840 - 580));
   position: relative;
 }
 
 .feedback__polygon {
   position: absolute;
-  z-index: -10;
   top: 0;
+  pointer-events: none;
+
+  @include vp-1439 {
+    display: none;
+  }
 }
 
 .feedback__wrapper {
@@ -22,12 +26,21 @@
 
 .feedback__wrapper img {
   z-index: 20;
+
+  @include vp-1439 {
+    display: none;
+  }
 }
 
 .feedback__form {
   padding-left: 120px;
   padding-right: 10px;
   z-index: 50;
+
+  @include vp-1439 {
+    padding-left: calc(120px - (1920px - 100vw)/(1920 - 770)*120);
+    padding-right: 0;
+  }
 }
 
 .feedback__form h2 {
@@ -39,12 +52,17 @@
   @include font(16px, 22px, 400, $color-default-white);
   font-family: $second-font;
   margin: 0 0 35px;
+
+  @include vp-1439 {
+    margin: 0 0 25px;
+  }
 }
 
 .feedbak__fields {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 35px;
 }
 
 .feedbak__fields input {
@@ -59,10 +77,14 @@
     @include font(16px, 22pz, 400, $color-default-white);
     font-family: $second-font;
   }
+
+  @include vp-1439 {
+    width: 320px;
+  }
 }
 
 .feedbak__fields textarea {
-  margin: 20px 0 33px;
+  margin: 20px 0 0;
   padding: 25px 15px;
   width: 580px;
   height: 155px;
@@ -74,18 +96,20 @@
     @include font(16px, 22pz, 400, $color-default-white);
     font-family: $second-font;
   }
+
+  @include vp-1439 {
+    width: 100%;
+  }
 }
 
 .feedback__buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .feedback__form button {
   width: 265px;
-  padding: 15px 0;
+  padding: 15px 0 12px;
   @include font(16px, 19px, 700, $color-default-white);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -94,46 +118,55 @@
   border-radius: 3px;
 }
 
-.feedback__approval {
-  // display: block;
-  @include font(14px, 16px, 400, $color-default-white);
-  font-family: $second-font;
-  width: 270px;
-  padding-left: 30px;
-  user-select: none;
-  cursor: pointer;
+.feedback__checkbox {
+  padding-left: 50px;
+  align-self: flex-end;
+  position: relative;
+
+  @include vp-1439 {
+    padding-left: 40px;
+  }
 }
 
-.feedback__buttons input+label::before {
+.feedback__approval {
+  display: block;
+  @include font(14px, 16px, 400, $color-default-white);
+  font-family: $second-font;
+  width: 234px;
+}
+
+.feedback__checkbox input+label::before {
   content: "";
   position: absolute;
   width: 15px;
   height: 15px;
   border: 1px solid $color-default-white;
   border-radius: 2px;
-  top: 25px;
-  right: 250px;
+  top: 5px;
+  left: 25px;
+
+  @include vp-1439 {
+    left: 15px;
+  }
 }
 
-.feedback__buttons input:checked+label::after {
+.feedback__checkbox input:checked+label::before {
   content: "";
   position: absolute;
   width: 15px;
   height: 15px;
-  background-image: url(../img/icon-ok.png);
+  background-image: url(../../img/icon-ok.png);
   background-repeat: no-repeat;
   background-position: center;
-  top: 25px;
-  right: 250px;
+  top: 5px;
+  left: 25px;
+
+  @include vp-1439 {
+    left: 15px;
+  }
 }
 
-
-.feedback__buttons input:focus+label {
+.feedback__checkbox input:focus+label {
   outline: 1px solid $color-default-white;
-  outline-offset: 1px;
-}
-
-.feedback__polygon {
-  height: 210%;
-  z-index: 10;
+  outline-offset: 2px;
 }
