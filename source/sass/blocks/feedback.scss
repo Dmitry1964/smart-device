@@ -1,0 +1,139 @@
+.feedback {
+  // background-image: url(../../img/background-feedback.jpg);
+  padding-top: calc(165px - (1920px - 100vw)/(1920 - 770)*(165 - 50));
+  // padding-bottom: calc(250px - (1920px - 100vw)/(1920 - 770)*(250 - 125));
+  background-color: $color-lightblue;
+  background-repeat: no-repeat;
+  height: 840px;
+  position: relative;
+}
+
+.feedback__polygon {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+}
+
+.feedback__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback__wrapper img {
+  z-index: 20;
+}
+
+.feedback__form {
+  padding-left: 120px;
+  padding-right: 10px;
+  z-index: 50;
+}
+
+.feedback__form h2 {
+  @include font(36px, 51px, 400, $color-default-white);
+  margin: 0 0 10px;
+}
+
+.feedback__form p {
+  @include font(16px, 22px, 400, $color-default-white);
+  font-family: $second-font;
+  margin: 0 0 35px;
+}
+
+.feedbak__fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.feedbak__fields input {
+  width: 275px;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  background-color: $color-dark-15;
+  padding: 15px;
+
+  &::placeholder {
+    @include font(16px, 22pz, 400, $color-default-white);
+    font-family: $second-font;
+  }
+}
+
+.feedbak__fields textarea {
+  margin: 20px 0 33px;
+  padding: 25px 15px;
+  width: 580px;
+  height: 155px;
+  background-color: $color-dark-15;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    @include font(16px, 22pz, 400, $color-default-white);
+    font-family: $second-font;
+  }
+}
+
+.feedback__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.feedback__form button {
+  width: 265px;
+  padding: 15px 0;
+  @include font(16px, 19px, 700, $color-default-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: $color-dark;
+  border: none;
+  border-radius: 3px;
+}
+
+.feedback__approval {
+  // display: block;
+  @include font(14px, 16px, 400, $color-default-white);
+  font-family: $second-font;
+  width: 270px;
+  padding-left: 30px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.feedback__buttons input+label::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+  top: 25px;
+  right: 250px;
+}
+
+.feedback__buttons input:checked+label::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-ok.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 25px;
+  right: 250px;
+}
+
+
+.feedback__buttons input:focus+label {
+  outline: 1px solid $color-default-white;
+  outline-offset: 1px;
+}
+
+.feedback__polygon {
+  height: 210%;
+  z-index: 10;
+}

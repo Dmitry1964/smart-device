@@ -40,7 +40,6 @@
         <button type="button">Заказать звонок</button>
       </nav>
     </header>
-
     <section class="header-image">
       <div class="header-image__title">
         <h2>Печатные платы</h2>
@@ -149,6 +148,34 @@
               </a>
             </li>
           </ul>
+        </div>
+      </section>
+      <section class="feedback">
+        <svg class="feedback__polygon" viewBox="0 0 920 840" xmlns="http://www.w3.org/2000/svg">
+          <polygon points=" 0 0, 0 403, 465 0," stroke="none" fill="#0677b7" />
+        </svg>
+        <div class="feedback__wrapper container">
+          <img src="img/paper-airplane.png" width="510" height="285" alt="Изображение бумажного самолетика">
+          <form class="feedback__form" action="#" method="get">
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
+            <div class="feedbak__fields">
+              <label>
+                <input type="text" name="name" id="name" placeholder="Имя" required>
+              </label>
+              <label>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+              </label>
+              <textarea name="message" cols="70" rows="5" placeholder="Ващ вопрос"></textarea>
+            </div>
+            <div class="feedback__buttons">
+              <button type="submit">Задать вопрос</button>
+              <input class="visually-hidden" type="checkbox" name="approval" id="approval" tabindex="0" required
+                checked>
+              <label class="feedback__approval" for="approval">Я согласен на обработку персональных
+                данных</label>
+            </div>
+          </form>
         </div>
       </section>
     </main>
