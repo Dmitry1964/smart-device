@@ -1643,8 +1643,9 @@ button,
     padding-top: 77px;
   }
 
-  .features__item {
-    height: 360px;
+  .features__list {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .features__item h3 {
@@ -1729,6 +1730,25 @@ button,
   .header__logo-image {
     width: calc(55px - (770px - 100vw)/(770 - 320)*(55 - 35));
     height: auto;
+  }
+}
+
+@media (max-width: 770px) and (max-width: 769px) {
+  .features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .features__item {
+    min-height: 340px;
+    padding: 75px 30px 35px;
+  }
+
+  .features__item h3 {
+    font-size: 20px;
+    line-height: 140%;
+    font-weight: 400;
+    color: #00b2ff;
   }
 }
 

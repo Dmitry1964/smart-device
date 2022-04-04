@@ -89,18 +89,38 @@
   margin: 0;
 }
 
+
+
 @media (max-width: $vp-770) {
   .features {
     padding-top: 77px;
+
+    @include vp-769 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+
+  .features__list {
+    grid-template-columns: 1fr;
   }
 
   .features__item {
-    height: 360px;
+    // min-height: 360px;
+
+    @include vp-769 {
+      min-height: 340px;
+      padding: 75px 30px 35px;
+    }
   }
 
   .features__item h3 {
     @include font(24px, 34px, 400, $color-lightblue);
     margin-bottom: 7px;
+
+    @include vp-769 {
+      @include font(20px, 140%, 400, $color-lightblue);
+    }
   }
 
   .features__item:nth-child(5n+3) {
