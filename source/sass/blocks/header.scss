@@ -3,8 +3,7 @@
   justify-content: flex-start;
   position: fixed;
   align-items: center;
-  padding-top: calc(30px - (1920px - 100vw)/(1920 - 770)*(30 - 20));
-  padding-bottom: calc(35px - (1920px - 100vw)/(1920 - 770)*(35 - 25));
+  height: 120px;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   z-index: 100;
 
@@ -15,7 +14,6 @@
 
 .header__logo {
   display: flex;
-  align-items: center;
   margin-right: calc(170px - (1920px - 100vw)/(1920 - 770)*(170 - 0));
 }
 
@@ -25,7 +23,7 @@
 
 .header__logo h3 {
   @include font(25px, 29px, 700, $color-lightgray);
-  margin: 0;
+  margin: 0 0 3px;
 }
 
 .header__logo-title p {
@@ -93,6 +91,14 @@
     display: none;
   }
 }
+
+@media (max-width: $vp-770) {
+  .header__navigation {
+    height: 100px;
+    padding-top: 0px;
+  }
+}
+
 
 @media (max-width: $vp-320) {
   .header {
