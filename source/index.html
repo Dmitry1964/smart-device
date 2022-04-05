@@ -204,7 +204,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__wrapper container">
+      <div class="footer__wrapper">
         <section class="footer__block-logo">
           <h2 class="visually-hidden">Логотип и ссылки соцсетей</h2>
           <div class="footer__logo">
@@ -240,10 +240,13 @@
             </li>
           </ul>
         </section>
-        <section class="footer__block-links">
+        <section class="footer__block-links footer__block-links--open">
           <h2 class="visually-hidden">Ссылки на разделы сайта</h2>
-          <h3>Разделы сайта</h3>
-          <ul class="footer__links">
+          <div class="footer__title-links">
+            <h3>Разделы сайта</h3>
+            <button class="footer__button-links footer__button-links--open"></button>
+          </div>
+          <ul class="footer__links footer__links--close">
             <li>
               <a href="sitemap.html">О компании</a>
             </li>
@@ -269,10 +272,13 @@
         </section>
         <section class="footer__block-contacts">
           <h2 class="visually-hidden">Адрес и телефоны</h2>
-          <h3>Наш офис</h3>
+          <div class="footer__title-contacts">
+            <h3>Наш офис</h3>
+            <button class="footer__button-contacts footer__button-contacts--close"></button>
+          </div>
           <ul class="footer__contacts">
             <li>
-              <p>г. Мытищи, Олимпийский&nbsp;проспект,д.10</p>
+              <p>г. Мытищи,&nbsp;Олимпийский&nbsp;проспект,<br>д.10</p>
             </li>
             <li>
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>

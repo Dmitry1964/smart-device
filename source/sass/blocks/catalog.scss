@@ -75,9 +75,11 @@
   }
 
   .catalog__title-mobile {
-    display: block;
-    @include font(28px, 39px, 400, $color-default-white);
-    margin: 0 0 30px;
+    @include vp-769 {
+      display: block;
+      @include font(28px, 39px, 400, $color-default-white);
+      margin: 0 0 30px;
+    }
   }
 
   .catalog__item p {
@@ -92,6 +94,7 @@
   }
 
   .catalog__item p {
+    @include font(18px, 30px, 400, $color-default-white);
     left: 30px;
     top: 25px;
   }

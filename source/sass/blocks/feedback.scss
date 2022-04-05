@@ -6,6 +6,11 @@
   background-repeat: no-repeat;
   height: calc(840px - (1920px - 100vw)/(1920 - 770)*(840 - 580));
   position: relative;
+
+  @include vp-769 {
+    padding-top: 45px;
+    height: 750px;
+  }
 }
 
 .feedback__polygon {
@@ -41,11 +46,21 @@
     padding-left: calc(120px - (1920px - 100vw)/(1920 - 770)*120);
     padding-right: 0;
   }
+
+  @include vp-769 {
+    width: 100%;
+  }
 }
 
 .feedback__form h2 {
   @include font(36px, 51px, 400, $color-default-white);
   margin: 0 0 10px;
+
+  @include vp-769 {
+    font-size: calc(36px - (770px - 100vw)/(770 - 320)*(36 - 30));
+    width: 100%;
+    margin: 0 0 5px;
+  }
 }
 
 .feedback__form p {
@@ -56,6 +71,11 @@
   @include vp-1439 {
     margin: 0 0 25px;
   }
+
+  @include vp-769 {
+    @include font(14px, 19px, 400, $color-default-white);
+    margin-bottom: 35px;
+  }
 }
 
 .feedbak__fields {
@@ -63,6 +83,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 35px;
+
+  @include vp-769 {
+    flex-direction: column;
+  }
 }
 
 .feedbak__fields input {
@@ -71,7 +95,7 @@
   border: none;
   border-radius: 3px;
   background-color: $color-dark-15;
-  padding: 15px;
+  padding: 10px 15px 15px;
 
   &::placeholder {
     @include font(16px, 22pz, 400, $color-default-white);
@@ -81,11 +105,16 @@
   @include vp-1439 {
     width: 320px;
   }
+
+  @include vp-769 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 
 .feedbak__fields textarea {
   margin: 20px 0 0;
-  padding: 25px 15px;
+  padding: 30px 15px 25px;
   width: 580px;
   height: 155px;
   background-color: $color-dark-15;
@@ -100,11 +129,19 @@
   @include vp-1439 {
     width: 100%;
   }
+
+  @include vp-769 {
+    margin: 0 0 20px;
+  }
 }
 
 .feedback__buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @include vp-769 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .feedback__form button {
@@ -116,6 +153,10 @@
   background-color: $color-dark;
   border: none;
   border-radius: 3px;
+
+  @include vp-769 {
+    margin-bottom: 25px;
+  }
 }
 
 .feedback__checkbox {
@@ -125,6 +166,10 @@
 
   @include vp-1439 {
     padding-left: 40px;
+  }
+
+  @include vp-769 {
+    padding-left: 30px;
   }
 }
 
@@ -148,6 +193,10 @@
   @include vp-1439 {
     left: 15px;
   }
+
+  @include vp-769 {
+    left: 0;
+  }
 }
 
 .feedback__checkbox input:checked+label::before {
@@ -164,9 +213,27 @@
   @include vp-1439 {
     left: 15px;
   }
+
+  @include vp-769 {
+    left: 0;
+  }
 }
 
 .feedback__checkbox input:focus+label {
   outline: 1px solid $color-default-white;
   outline-offset: 2px;
+}
+
+@media (max-width: $vp-320) {
+  .feedback__form h2 {
+    @include font(30px, 43px, 400, $color-default-white);
+  }
+
+  .feedbak__fields textarea {
+    height: 180px;
+  }
+
+  .feedbak__fields {
+    margin-bottom: 10px;
+  }
 }
