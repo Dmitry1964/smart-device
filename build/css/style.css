@@ -1035,6 +1035,10 @@ button,
   margin: 0 0 calc(50px - (1920px - 100vw)/(1920 - 770)*(50 - 40));
 }
 
+.catalog__title-mobile {
+  display: none;
+}
+
 .catalog__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1687,6 +1691,15 @@ button,
     display: none;
   }
 
+  .catalog__title-mobile {
+    display: block;
+    font-size: 28px;
+    line-height: 39px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0 0 30px;
+  }
+
   .catalog__item p {
     width: 150px;
   }
@@ -1738,6 +1751,10 @@ button,
   .promo__description {
     height: 210px;
     overflow: hidden;
+  }
+
+  .catalog__title {
+    display: none;
   }
 
   .header-image h2 {
@@ -1805,6 +1822,11 @@ button,
   .promo__button {
     width: 160px;
     margin-top: 15px;
+  }
+
+  .catalog__item::after {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -1890,6 +1912,16 @@ button,
 
   .features__item:nth-child(5n+4) h3 {
     margin-bottom: 10px;
+  }
+
+  .catalog {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+  .catalog__item p {
+    left: 30px;
+    top: 25px;
   }
 
   .header-image {
