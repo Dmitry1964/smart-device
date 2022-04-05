@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-position: 0 5px;
   padding-bottom: 50px;
+
+  @include vp-769 {
+    background-image: none;
+    padding-left: 0;
+  }
 }
 
 .promo__content h2 {
@@ -40,6 +45,15 @@
   border: 1px solid $color-lightblue;
   border-radius: 3px;
   cursor: pointer;
+
+  @include vp-769 {
+    width: 160px;
+    margin-top: 15px;
+  }
+
+  @include vp-374 {
+    padding: 8px 5px 10px
+  }
 }
 
 @media (max-width: $vp-770) {
@@ -49,6 +63,11 @@
 
   .promo__content h2 {
     margin-bottom: 12px;
+
+    @include vp-769 {
+      font-size: calc(36px - (770px - 100vw)/(770 - 320)*(36 - 28));
+      line-height: calc(51px - (770px - 100vw)/(770 - 320)*(51 - 39));
+    }
   }
 
   .promo__description p {
@@ -57,9 +76,23 @@
     &:nth-of-type(n+2) {
       margin-bottom: 15px;
     }
+
+    @include vp-769 {
+      font-size: calc(16px - (770px - 100vw)/(770 - 320)*(16 - 14));
+      line-height: calc(22px - (770px - 100vw)/(770 - 320)*(22 - 19));
+    }
+
   }
 
   .promo__description {
     margin: 0;
+
+    @include vp-769 {
+      height: 210px;
+      overflow: hidden;
+    }
   }
+}
+
+@media (max-width: $vp-320) {
 }
