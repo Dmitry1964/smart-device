@@ -12,6 +12,7 @@
   @include vp-769 {
     background-image: none;
     padding-left: 0;
+    height: auto;
   }
 }
 
@@ -24,14 +25,27 @@
   margin-bottom: calc(42px - (1920px - 100vw)/(1920 - 770)*42);
 }
 
+.promo__description--close {
+  height: 150px;
+  overflow: hidden;
+
+  @include vp-1439 {
+    height: 275px
+  }
+
+  @include vp-1279 {
+    height: 230px
+  }
+
+  @include vp-769 {
+    height: 210px
+  }
+}
+
 .promo__description p {
   @include font(16px, 22px, 400, $color-dark);
   font-family: $second-font;
   margin: 0 0 15px;
-}
-
-.promo__content-hidden {
-  display: none;
 }
 
 .promo__button {
@@ -86,13 +100,5 @@
 
   .promo__description {
     margin: 0;
-
-    @include vp-769 {
-      height: 210px;
-      overflow: hidden;
-    }
   }
-}
-
-@media (max-width: $vp-320) {
 }

@@ -992,6 +992,11 @@ button,
   margin-bottom: calc(42px - (1920px - 100vw)/(1920 - 770)*42);
 }
 
+.promo__description--close {
+  height: 150px;
+  overflow: hidden;
+}
+
 .promo__description p {
   font-size: 16px;
   line-height: 22px;
@@ -999,10 +1004,6 @@ button,
   color: #041427;
   font-family: "PT-Mono", "Arial", serif;
   margin: 0 0 15px;
-}
-
-.promo__content-hidden {
-  display: none;
 }
 
 .promo__button {
@@ -1520,6 +1521,10 @@ button,
 }
 
 @media (max-width: 1439px) {
+  .promo__description--close {
+    height: 275px;
+  }
+
   .catalog__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1629,6 +1634,10 @@ button,
 
   .header__navigation button {
     display: none;
+  }
+
+  .promo__description--close {
+    height: 230px;
   }
 
   .header-image__title p {
@@ -1743,11 +1752,6 @@ button,
   .promo__description p {
     font-size: calc(16px - (770px - 100vw)/(770 - 320)*(16 - 14));
     line-height: calc(22px - (770px - 100vw)/(770 - 320)*(22 - 19));
-  }
-
-  .promo__description {
-    height: 210px;
-    overflow: hidden;
   }
 
   .catalog__title {
@@ -1945,6 +1949,11 @@ button,
   .promo__content {
     background-image: none;
     padding-left: 0;
+    height: auto;
+  }
+
+  .promo__description--close {
+    height: 210px;
   }
 
   .promo__button {
