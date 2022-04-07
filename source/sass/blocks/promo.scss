@@ -34,7 +34,7 @@
   }
 
   @include vp-1279 {
-    height: 230px
+    height: 260px
   }
 
   @include vp-769 {
@@ -100,5 +100,9 @@
 
   .promo__description {
     margin: 0;
+  }
+
+  .promo__button {
+    margin-top: 18px;
   }
 }

@@ -1,6 +1,6 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler, promoButton, buttonLinks, buttonContacts } from './modules/main-page';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +9,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  promoButton.addEventListener('click', () => {
+    onPromoButtonHendler();
+  });
+  buttonLinks.addEventListener('click', () => {
+    onButtonLinksHendler();
+  });
+  buttonContacts.addEventListener('click', () => {
+    onButtonContactsHendler();
+  })
 
   // Modules
   // ---------------------------------
@@ -17,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    initPage();
   });
 });
 

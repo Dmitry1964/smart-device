@@ -261,7 +261,8 @@
   }
 
 
-  .footer__links--close {
+  .footer__links--close,
+  .footer__contacts--close {
     @include vp-769 {
       display: none;
     }

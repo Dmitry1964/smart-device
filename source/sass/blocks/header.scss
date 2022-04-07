@@ -92,8 +92,10 @@
   border-radius: 3px;
   padding: 10px 15px;
   margin-right: 60px;
+  margin-top: 35px;
   background-color: transparent;
   cursor: pointer;
+  align-self: flex-start;
 
   @include vp-1279 {
     display: none;
