@@ -1,11 +1,15 @@
 .feedback {
-  // background-image: url(../../img/background-feedback.jpg);
+  background-image: url(../img/background-feedback.jpg);
   padding-top: calc(165px - (1920px - 100vw)/(1920 - 770)*(165 - 44));
   padding-bottom: calc(250px - (1920px - 100vw)/(1920 - 770)*(250 - 125));
   background-color: $color-lightblue;
   background-repeat: no-repeat;
   height: calc(840px - (1920px - 100vw)/(1920 - 770)*(840 - 580));
   position: relative;
+
+  @include vp-1439 {
+    background-image: none;
+  }
 
   @include vp-769 {
     padding-top: 45px;
