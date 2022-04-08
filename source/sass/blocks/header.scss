@@ -58,6 +58,10 @@
   margin-right: calc(125px - (1920px - 100vw)/(1920 - 770)*(125 - 0));
   padding-bottom: 10px;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   &:last-child {
     margin: 0;
   }
@@ -96,6 +100,10 @@
   background-color: transparent;
   cursor: pointer;
   align-self: flex-start;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @include vp-1279 {
     display: none;

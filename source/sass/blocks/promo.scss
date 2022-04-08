@@ -60,6 +60,10 @@
   border-radius: 3px;
   cursor: pointer;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   @include vp-769 {
     width: 160px;
     margin-top: 15px;

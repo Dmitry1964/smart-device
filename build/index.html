@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Описание проекта">
+  <link rel="preload" href="fonts/roboto-condensed-v24-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v24-latin_cyrillic-regular.woff" as="font" crossorigin="anonymous">
   <title>SmartDevice</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -37,7 +39,7 @@
             </a>
           </li>
         </ul>
-        <button type="button">Заказать звонок</button>
+        <button class="header__button" type="button">Заказать звонок</button>
       </nav>
     </header>
     <section class="header-image">
@@ -124,11 +126,11 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <!-- <source type="image/webp" media="(max-width: 769px)"
-                    srcset="img/image1-mobil.webp, img/image1-mobil@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 769px)"
+                    srcset="img/image1-mobile.webp, img/image1-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1564px)"
                     srcset="img/image1-tablet.webp, img/image1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/image1-desk.webp, img/image1-desk@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/image1-desk.webp, img/image1-desk@2x.webp 2x">
                   <source media="(max-width: 769px)" srcset="img/image1-mobile.jpg 1x, img/image1-mobile@2x.jpg 2x">
                   <source media="(max-width: 1564px)" srcset="img/image1-tablet.jpg 1x, img/image1-tablet@2x.jpg 2x">
                   <img src="img/image1-desk.jpg" srcset="img/image1-desk@2x.jpg 2x"
@@ -140,11 +142,11 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <!-- <source type="image/webp" media="(max-width: 769px)"
-                    srcset="img/image1-mobil.webp, img/image2-mobil@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 769px)"
+                    srcset="img/image2-mobile.webp, img/image2-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1564px)"
                     srcset="img/image2-tablet.webp, img/image2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/image2-desk.webp, img/image2-desk@2x.webp 2x"> -->
+                  <source type="image/webp" srcset="img/image2-desk.webp, img/image2-desk@2x.webp 2x">
                   <source media="(max-width: 769px)" srcset="img/image2-mobile.jpg 1x, img/image2-mobile@2x.jpg 2x">
                   <source media="(max-width: 1564px)" srcset="img/image2-tablet.jpg 1x, img/image2-tablet@2x.jpg 2x">
                   <img src="img/image2-desk.jpg" srcset="img/image2-desk@2x.jpg 2x"
@@ -156,11 +158,11 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <!-- <source type="image/webp" media="(max-width: 375px)"
-                    srcset="img/image2-mobil.webp, img/image2-mobil@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 769px)"
+                    srcset="img/image3-mobile.webp, img/image3-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1564px)"
-                    srcset="img/image2-tablet.webp, img/image2-tablet@2x.webp 2x"> -->
-                  <!-- <source type="image/webp" srcset="img/image2-desk.webp, img/image2-desk@2x.webp 2x"> -->
+                    srcset="img/image3-tablet.webp, img/image3-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/image3-desk.webp, img/image3-desk@2x.webp 2x">
                   <source media="(max-width: 769px)" srcset="img/image3-mobile.jpg 1x, img/image3-mobile@2x.jpg 2x">
 
                   <source media="(max-width: 1564px)" srcset="img/image3-tablet.jpg 1x, img/image3-tablet@2x.jpg 2x">
@@ -296,17 +298,20 @@
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--load">
+  <div class="modal modal--init">
     <div class="modal__wrapper">
+      <svg class="modal__button-close" width="20" height="20">
+        <use href="img/sprite_auto.svg#icon-close"></use>
+      </svg>
       <form action="#" method="get">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
         <div class="modal__fields">
-          <label for="">
-            <input type="text" name="name" id="name" placeholder="Имя" autofocus>
+          <label>
+            <input class="modal__input" type="text" name="name" id="username" placeholder="Имя" autofocus>
           </label>
-          <label for="">
-            <input type="tel" name="phone" id="phone" placeholder="Телефон">
+          <label>
+            <input type="tel" name="phone" id="userphone" placeholder="Телефон">
           </label>
           <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
         </div>
@@ -319,35 +324,6 @@
     </div>
   </div>
 
-
-  <!-- ---------------------------------------------------------- -->
-  <!-- <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div> -->
 
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>

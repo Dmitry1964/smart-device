@@ -65,6 +65,10 @@
 .footer__social li {
   margin-right: 25px;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -101,6 +105,10 @@
 .footer__contacts a {
   @include font(16px, 135%, 400, $color-whitw-70);
   font-family: $second-font;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .footer__links li {

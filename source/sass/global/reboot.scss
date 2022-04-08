@@ -17,6 +17,7 @@ html {
   line-height: 24px;
   font-family: "Roboto", "Arial", sans-serif;
   color: $color-default-black;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,6 +82,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

@@ -6,16 +6,28 @@
   z-index: 1000;
   top: 145px;
   left: calc(50% - 260px);
-
+  transition: 0.5s;
 }
 
-.modal--load {
+.modal--init {
   transform: translateY(-755px);
-  transition: transform 0.5s;
+  transition: 0.5s;
 }
 
 .modal__wrapper {
   padding: 40px;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  color: $color-default-white;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 .modal h2 {

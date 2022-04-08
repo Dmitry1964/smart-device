@@ -5,6 +5,7 @@
   background-size: cover;
   height: calc(880px - (1920px - 100vw)/(1920 - 770)*(880 - 640));
   padding-top: calc(305px - (1920px - 100vw)/(1920 - 770)*(305 - 180));
+  background-color: $color-dark-50;
 
   @include retina {
     background-image: url(../img/background-header@2x.jpg);
@@ -45,6 +46,10 @@
   text-transform: uppercase;
   padding: 18px 25px;
   background-color: $color-lightblue;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   @include vp-1023 {
     margin-left: 50px;

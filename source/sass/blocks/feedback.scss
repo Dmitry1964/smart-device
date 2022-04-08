@@ -153,6 +153,11 @@
   background-color: $color-dark;
   border: none;
   border-radius: 3px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5
+  }
 
   @include vp-769 {
     margin-bottom: 25px;
@@ -178,6 +183,7 @@
   @include font(14px, 16px, 400, $color-default-white);
   font-family: $second-font;
   width: 234px;
+  user-select: none;
 }
 
 .feedback__checkbox input+label::before {
