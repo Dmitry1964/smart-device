@@ -13,12 +13,13 @@ const buttonContacts = footerPage.querySelector('.footer__button-contacts');
 
 const modal = document.querySelector('.modal');
 const modalButtonClose = modal.querySelector('.modal__button-close');
-const modalInput = modal.querySelector('.modal__input');
+const modalInput = modal.querySelector('input[name="name"]');
 
 const initModal = () => {
   modal.classList.remove('modal--init');
   pageWrapper.classList.add('page');
   modalInput.focus();
+  modalInput.value.clear();
 };
 
 const closeModal = () => {
