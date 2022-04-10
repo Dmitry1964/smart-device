@@ -3,13 +3,13 @@
 }
 
 .promo__content {
-  padding-left: calc(250px - (1920px - 100vw)/(1920 - 779)*(250 - 179));
-  background-image: url(../img/image-2022.png);
+  padding-left: calc(250px - (1920px - 100vw) / (1920 - 779) * (250 - 179));
+  background-image: url("../img/image-2022.png");
   background-repeat: no-repeat;
   background-position: 0 5px;
   padding-bottom: 50px;
 
-  @include vp-769 {
+  @include vp-767 {
     background-image: none;
     padding-left: 0;
     height: auto;
@@ -22,7 +22,7 @@
 }
 
 .promo__description {
-  margin-bottom: calc(42px - (1920px - 100vw)/(1920 - 770)*42);
+  margin-bottom: calc(42px - (1920px - 100vw) / (1920 - 770) * 42);
 }
 
 .promo__description--close {
@@ -30,15 +30,15 @@
   overflow: hidden;
 
   @include vp-1439 {
-    height: 275px
+    height: 275px;
   }
 
   @include vp-1279 {
-    height: 260px
+    height: 260px;
   }
 
-  @include vp-769 {
-    height: 210px
+  @include vp-767 {
+    height: 210px;
   }
 }
 
@@ -64,13 +64,13 @@
     opacity: 0.5;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     width: 160px;
     margin-top: 15px;
   }
 
   @include vp-374 {
-    padding: 8px 5px 10px
+    padding: 8px 5px 10px;
   }
 }
 
@@ -82,9 +82,9 @@
   .promo__content h2 {
     margin-bottom: 12px;
 
-    @include vp-769 {
-      font-size: calc(36px - (770px - 100vw)/(770 - 320)*(36 - 28));
-      line-height: calc(51px - (770px - 100vw)/(770 - 320)*(51 - 39));
+    @include vp-767 {
+      font-size: calc(36px - (770px - 100vw) / (770 - 320) * (36 - 28));
+      line-height: calc(51px - (770px - 100vw) / (770 - 320) * (51 - 39));
     }
   }
 
@@ -95,11 +95,10 @@
       margin-bottom: 15px;
     }
 
-    @include vp-769 {
-      font-size: calc(16px - (770px - 100vw)/(770 - 320)*(16 - 14));
-      line-height: calc(22px - (770px - 100vw)/(770 - 320)*(22 - 19));
+    @include vp-767 {
+      font-size: calc(16px - (770px - 100vw) / (770 - 320) * (16 - 14));
+      line-height: calc(22px - (770px - 100vw) / (770 - 320) * (22 - 19));
     }
-
   }
 
   .promo__description {

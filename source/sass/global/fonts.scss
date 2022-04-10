@@ -41,3 +41,10 @@
     url("../fonts/pt-mono-v11-cyrillic-ext_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/pt-mono-v11-cyrillic-ext_cyrillic-regular.woff") format("woff");
 }
+
+@mixin font($size, $height, $weight, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}

@@ -1,6 +1,6 @@
 .features {
-  padding-top: calc(120px - (1920px - 100vw)/(1920 - 770)*(120 - 80));
-  padding-bottom: calc(120px - (1920px - 100vw)/(1920 - 770)*(120 - 75));
+  padding-top: calc(120px - (1920px - 100vw) / (1920 - 770) * (120 - 80));
+  padding-bottom: calc(120px - (1920px - 100vw) / (1920 - 770) * (120 - 75));
 }
 
 .features__list {
@@ -15,7 +15,7 @@
 
 .features__item {
   padding: 95px 45px 35px;
-  min-height: calc(300px - (1920px - 100vw)/(1920 - 770)*(300 - 360));
+  min-height: calc(300px - (1920px - 100vw) / (1920 - 770) * (300 - 360));
   border: 1px solid $color-gray;
   background-repeat: no-repeat;
   background-position: 45px 40px;
@@ -32,24 +32,23 @@
   }
 
   &:nth-child(5n+1) {
-    background-image: url(../img/svg/stopwatch.svg);
+    background-image: url("../img/svg/stopwatch.svg");
   }
 
   &:nth-child(5n+2) {
-    background-image: url(../img/svg/hired.svg);
+    background-image: url("../img/svg/hired.svg");
   }
 
   &:nth-child(5n+3) {
-    background-image: url(../img/svg/detective.svg);
+    background-image: url("../img/svg/detective.svg");
   }
 
   &:nth-child(5n+4) {
-    background-image: url(../img/svg/tag.svg);
+    background-image: url("../img/svg/tag.svg");
   }
 }
 
 .features__item:hover {
-
   &::before {
     width: 100%;
     z-index: -10;
@@ -57,19 +56,19 @@
   }
 
   &:nth-child(5n+1) {
-    background-image: url(../img/svg/stopwatch-hover.svg);
+    background-image: url("../img/svg/stopwatch-hover.svg");
   }
 
   &:nth-child(5n+2) {
-    background-image: url(../img/svg/hired-hover.svg);
+    background-image: url("../img/svg/hired-hover.svg");
   }
 
   &:nth-child(5n+3) {
-    background-image: url(../img/svg/detective-hover.svg);
+    background-image: url("../img/svg/detective-hover.svg");
   }
 
   &:nth-child(5n+4) {
-    background-image: url(../img/svg/tag-hover.svg);
+    background-image: url("../img/svg/tag-hover.svg");
   }
 }
 
@@ -89,14 +88,11 @@
   margin: 0;
 }
 
-
-
 @media (max-width: $vp-770) {
-
   .features__list {
     column-gap: 25px;
 
-    @include vp-769 {
+    @include vp-767 {
       grid-template-columns: 1fr;
     }
   }
@@ -115,7 +111,6 @@
     padding-top: 85px;
   }
 
-
   .features__item h3 {
     margin-bottom: 10px;
 
@@ -125,7 +120,6 @@
   }
 
   .features__item p {
-
     @include vp-374 {
       @include font(14px, 135%, 400, $color-dark);
     }
@@ -133,7 +127,6 @@
 }
 
 @media (max-width: $vp-320) {
-
   .features {
     padding-top: 50px;
     padding-bottom: 45px;
@@ -145,7 +138,6 @@
     background-size: 30px 30px;
     background-position: 30px 30px;
 
-
     &:nth-child(5n+3) {
       min-height: 325px;
       padding-top: 80px;
@@ -153,7 +145,7 @@
 
     &:nth-child(5n+4) {
       min-height: 325px;
-      padding-top: 80px
+      padding-top: 80px;
     }
   }
 

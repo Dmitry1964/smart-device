@@ -4,20 +4,6 @@
   }
 }
 
-@mixin font($size, $height, $weight, $color) {
-  font-size: $size;
-  line-height: $height;
-  font-weight: $weight;
-  color: $color;
-}
-
-@function calcSize($s-init, $s-final, $vp-max, $vp-min) {
-  $k: ($s-init - $s-final)/($vp-max - $vp-min);
-  $b: $s-init - ($k * $vp-max);
-  $b: $b * 1px;
-  @return calc( #{$b} - #{$k} * 100vw );
-}
-
 // Desktop first
 
 @mixin vp-1919 {
@@ -43,13 +29,6 @@
     @content;
   }
 }
-
-@mixin vp-769 {
-  @media (max-width: $vp-770 - 1) {
-    @content;
-  }
-}
-
 
 @mixin vp-767 {
   @media (max-width: $vp-768 - 1) {

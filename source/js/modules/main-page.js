@@ -24,7 +24,7 @@ const initModal = () => {
 const closeModal = () => {
   modal.classList.add('modal--init');
   pageWrapper.classList.remove('page');
-}
+};
 
 const initPromo = () => {
   promoDesctiption.classList.add('promo__description--close');
@@ -85,10 +85,7 @@ const onButtonContactsHendler = () => {
   }
 };
 
-
 export {
   onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler, initModal, closeModal,
   promoButton, buttonLinks, buttonContacts, headerButton, modalButtonClose, modalInput
 };
-
-

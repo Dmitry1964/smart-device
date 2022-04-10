@@ -1,30 +1,30 @@
 .header-image {
-  background-image: url(../img/background-header.jpg);
+  background-image: url("../img/background-header.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: calc(880px - (1920px - 100vw)/(1920 - 770)*(880 - 640));
-  padding-top: calc(305px - (1920px - 100vw)/(1920 - 770)*(305 - 180));
+  height: calc(880px - (1920px - 100vw) / (1920 - 770) * (880 - 640));
+  padding-top: calc(305px - (1920px - 100vw) / (1920 - 770) * (305 - 180));
   background-color: $color-dark-50;
 
   @include retina {
-    background-image: url(../img/background-header@2x.jpg);
+    background-image: url("../img/background-header@2x.jpg");
   }
 }
 
 .header-image__title {
-  padding-left: calc(475px - (1920px - 100vw)/(1920 - 770)*(475 - 50));
+  padding-left: calc(475px - (1920px - 100vw) / (1920 - 770) * (475 - 50));
 }
 
 .header-image__title h2 {
   @include font(80px, 94px, 700, $color-lightgray);
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  margin: 0 0 calc(35px - (1920px - 100vw)/(1920 - 770)*(35 - 0));
+  margin: 0 0 calc(35px - (1920px - 100vw) / (1920 - 770) * (35 - 0));
 
   @include vp-1919 {
-    font-size: calc(80px - (1920px - 100vw)/(1920 - 770)*(80 - 64));
-    line-height: calc(94px - (1920px - 100vw)/(1920 - 770)*(94 - 75));
+    font-size: calc(80px - (1920px - 100vw) / (1920 - 770) * (80 - 64));
+    line-height: calc(94px - (1920px - 100vw) / (1920 - 770) * (94 - 75));
   }
 }
 
@@ -62,52 +62,50 @@
 
 @media (max-width: $vp-770) {
   .header-image {
-    background-image: url(../img/background-header1.jpg);
-    padding-top: calc(180px - (770px - 100vw)/(770 - 320)*(180 - 150));
-    height: calc(640px - (770px - 100vw)/(770 - 320)*(640 - 560));
+    background-image: url("../img/background-header1.jpg");
+    padding-top: calc(180px - (770px - 100vw) / (770 - 320) * (180 - 150));
+    height: calc(640px - (770px - 100vw) / (770 - 320) * (640 - 560));
 
     @include retina {
-      background-image: url(../img/background-header1@2x.jpg);
+      background-image: url("../img/background-header1@2x.jpg");
 
-      @include vp-769 {
-        height: calc(640px - (770px - 100vw)/(770 - 320)*(640 - 560));
+      @include vp-767 {
+        height: calc(640px - (770px - 100vw) / (770 - 320) * (640 - 560));
       }
     }
   }
 
   .header-image h2 {
-    font-size: calc(64px - (770px - 100vw)/(770 - 320)*(64 - 36));
-    line-height: calc(75px - (770px - 100vw)/(770 - 320)*(75 - 42));
+    font-size: calc(64px - (770px - 100vw) / (770 - 320) * (64 - 36));
+    line-height: calc(75px - (770px - 100vw) / (770 - 320) * (75 - 42));
 
-    @include vp-769 {
+    @include vp-767 {
       margin-bottom: 10px;
     }
   }
 
   .header-image p {
-    font-size: calc(22px - (770px - 100vw)/(770 - 320)*(22 - 14));
-    line-height: calc(34px - (770px - 100vw)/(770 - 320)*(34 - 22));
+    font-size: calc(22px - (770px - 100vw) / (770 - 320) * (22 - 14));
+    line-height: calc(34px - (770px - 100vw) / (770 - 320) * (34 - 22));
 
-    @include vp-769 {
+    @include vp-767 {
       width: 100%;
       margin-bottom: 45px;
     }
   }
 
   .header-image__link--desk {
-
-    @include vp-769 {
+    @include vp-767 {
       display: none;
       margin: 0;
     }
   }
 
   .header-image__link--mobile {
-
-    @include vp-769 {
+    @include vp-767 {
       display: block;
-      font-size: calc(18px - (770px - 100vw)/(770 - 320)*(18 - 14));
-      line-height: calc(21px - (770px - 100vw)/(770 - 320)*(21 - 16));
+      font-size: calc(18px - (770px - 100vw) / (770 - 320) * (18 - 14));
+      line-height: calc(21px - (770px - 100vw) / (770 - 320) * (21 - 16));
       padding: 10px 30px;
       margin: 0;
       text-align: center;
@@ -117,10 +115,10 @@
 
 @media (max-width: $vp-320) {
   .header-image {
-    background-image: url(../../img/background-header2.jpg);
+    background-image: url("../img/background-header2.jpg");
 
     @include retina {
-      background-image: url(../../img/background-header2@2x.jpg);
+      background-image: url("../img/background-header2@2x.jpg");
     }
   }
 }

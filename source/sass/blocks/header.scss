@@ -14,14 +14,14 @@
 
 .header__logo {
   display: flex;
-  margin-right: calc(170px - (1920px - 100vw)/(1920 - 770)*(170 - 0));
+  margin-right: calc(170px - (1920px - 100vw) / (1920 - 770) * (170 - 0));
 }
 
 .header__logo-title {
   padding-left: 15px;
 }
 
-.header__logo h3 {
+.header__logo h2 {
   @include font(25px, 29px, 700, $color-lightgray);
   margin: 0 0 3px;
 
@@ -55,7 +55,7 @@
 }
 
 .header__links li {
-  margin-right: calc(125px - (1920px - 100vw)/(1920 - 770)*(125 - 0));
+  margin-right: calc(125px - (1920px - 100vw) / (1920 - 770) * (125 - 0));
   padding-bottom: 10px;
 
   &:hover {
@@ -113,21 +113,18 @@
 @media (max-width: $vp-770) {
   .header__navigation {
     height: 100px;
-    padding-top: 0px;
+    padding-top: 0;
 
     @include vp-767 {
-      height: calc(100px - (770px - 100vw)/(770 - 320)*(100 - 70));
+      height: calc(100px - (770px - 100vw) / (770 - 320) * (100 - 70));
     }
   }
 
   .header__logo-image {
-
     @include vp-767 {
-      // width: 35px;
-      width: calc(55px - (770px - 100vw)/(770 - 320)*(55 - 35));
+      width: calc(55px - (770px - 100vw) / (770 - 320) * (55 - 35));
       height: auto;
     }
-
   }
 }
 

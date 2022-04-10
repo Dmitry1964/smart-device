@@ -1,29 +1,20 @@
 .feedback {
-  background-image: url(../img/background-feedback.jpg);
-  padding-top: calc(165px - (1920px - 100vw)/(1920 - 770)*(165 - 44));
-  padding-bottom: calc(250px - (1920px - 100vw)/(1920 - 770)*(250 - 125));
+  background-image: url("../img/background-feedback.jpg");
+  background-size: cover;
+  padding-top: calc(165px - (1920px - 100vw) / (1920 - 770) * (165 - 44));
+  padding-bottom: calc(250px - (1920px - 100vw) / (1920 - 770) * (250 - 125));
   background-color: $color-lightblue;
   background-repeat: no-repeat;
-  height: calc(840px - (1920px - 100vw)/(1920 - 770)*(840 - 580));
+  height: calc(840px - (1920px - 100vw) / (1920 - 770) * (840 - 580));
   position: relative;
 
   @include vp-1439 {
     background-image: none;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-top: 45px;
     height: 750px;
-  }
-}
-
-.feedback__polygon {
-  position: absolute;
-  top: 0;
-  pointer-events: none;
-
-  @include vp-1439 {
-    display: none;
   }
 }
 
@@ -47,11 +38,11 @@
   z-index: 50;
 
   @include vp-1439 {
-    padding-left: calc(120px - (1920px - 100vw)/(1920 - 770)*120);
+    padding-left: calc(120px - (1920px - 100vw) / (1920 - 770) * 120);
     padding-right: 0;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     width: 100%;
   }
 }
@@ -60,8 +51,8 @@
   @include font(36px, 51px, 400, $color-default-white);
   margin: 0 0 10px;
 
-  @include vp-769 {
-    font-size: calc(36px - (770px - 100vw)/(770 - 320)*(36 - 30));
+  @include vp-767 {
+    font-size: calc(36px - (770px - 100vw) / (770 - 320) * (36 - 30));
     width: 100%;
     margin: 0 0 5px;
   }
@@ -76,24 +67,24 @@
     margin: 0 0 25px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     @include font(14px, 19px, 400, $color-default-white);
     margin-bottom: 35px;
   }
 }
 
-.feedbak__fields {
+.feedback__fields {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 35px;
 
-  @include vp-769 {
+  @include vp-767 {
     flex-direction: column;
   }
 }
 
-.feedbak__fields input {
+.feedback__fields input {
   width: 275px;
   height: 50px;
   border: none;
@@ -110,13 +101,13 @@
     width: 320px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     width: 100%;
     margin-bottom: 20px;
   }
 }
 
-.feedbak__fields textarea {
+.feedback__fields textarea {
   margin: 20px 0 0;
   padding: 30px 15px 25px;
   width: 580px;
@@ -134,7 +125,7 @@
     width: 100%;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin: 0 0 20px;
   }
 }
@@ -143,7 +134,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  @include vp-769 {
+  @include vp-767 {
     grid-template-columns: 1fr;
   }
 }
@@ -151,6 +142,7 @@
 .feedback__form button {
   width: 265px;
   padding: 15px 0 12px;
+
   @include font(16px, 19px, 700, $color-default-white);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -160,10 +152,10 @@
   cursor: pointer;
 
   &:hover {
-    opacity: 0.5
+    opacity: 0.5;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     margin-bottom: 25px;
   }
 }
@@ -177,13 +169,14 @@
     padding-left: 40px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     padding-left: 30px;
   }
 }
 
-.feedback__approval {
+.feedback__buttons label {
   display: block;
+
   @include font(14px, 16px, 400, $color-default-white);
   font-family: $second-font;
   width: 234px;
@@ -204,7 +197,7 @@
     left: 15px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     left: 0;
   }
 }
@@ -214,7 +207,7 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  background-image: url(../img/icon-ok.png);
+  background-image: url("../img/icon-ok.png");
   background-repeat: no-repeat;
   background-position: center;
   top: 5px;
@@ -224,7 +217,7 @@
     left: 15px;
   }
 
-  @include vp-769 {
+  @include vp-767 {
     left: 0;
   }
 }

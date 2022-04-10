@@ -21,7 +21,7 @@
             <use href="./img/sprite_auto.svg#logo"></use>
           </svg>
           <div class="header__logo-title">
-            <h3>Smart Device</h3>
+            <h2>Smart Device</h2>
             <p>умные технологии</p>
           </div>
         </div>
@@ -126,46 +126,54 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 769px)"
+                  <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/image1-mobile.webp, img/image1-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1564px)"
                     srcset="img/image1-tablet.webp, img/image1-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/image1-desk.webp, img/image1-desk@2x.webp 2x">
-                  <source media="(max-width: 769px)" srcset="img/image1-mobile.jpg 1x, img/image1-mobile@2x.jpg 2x">
+                  <!--1x: 270px; 2x: 540px-->
+                  <source media="(max-width: 767px)" srcset="img/image1-mobile.jpg 1x, img/image1-mobile@2x.jpg 2x">
+                  <!--1x: 670px; 2x: 1340px-->
                   <source media="(max-width: 1564px)" srcset="img/image1-tablet.jpg 1x, img/image1-tablet@2x.jpg 2x">
+                  <!--1x: 350px; 2x: 700px-->
                   <img src="img/image1-desk.jpg" srcset="img/image1-desk@2x.jpg 2x"
                     alt="Изображение фрагмента системной платы">
                 </picture>
-                <p>Производство<br class="catalog__breake"> печатных плат</p>
+                <p>Производство печатных плат</p>
               </a>
             </li>
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 769px)"
+                  <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/image2-mobile.webp, img/image2-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1564px)"
                     srcset="img/image2-tablet.webp, img/image2-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/image2-desk.webp, img/image2-desk@2x.webp 2x">
-                  <source media="(max-width: 769px)" srcset="img/image2-mobile.jpg 1x, img/image2-mobile@2x.jpg 2x">
+                  <!--1x: 270px; 2x: 540px-->
+                  <source media="(max-width: 767px)" srcset="img/image2-mobile.jpg 1x, img/image2-mobile@2x.jpg 2x">
+                  <!--1x: 670px; 2x: 1340px-->
                   <source media="(max-width: 1564px)" srcset="img/image2-tablet.jpg 1x, img/image2-tablet@2x.jpg 2x">
+                  <!--1x: 350px; 2x: 700px-->
                   <img src="img/image2-desk.jpg" srcset="img/image2-desk@2x.jpg 2x"
                     alt="Изображение фрагмента системной платы">
                 </picture>
-                <p>Монтаж печатных<br class="catalog__breake"> плат</p>
+                <p>Монтаж<br class="catalog__breake"> печатных плат</p>
               </a>
             </li>
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 769px)"
+                  <source type="image/webp" media="(max-width: 767px)"
                     srcset="img/image3-mobile.webp, img/image3-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1564px)"
                     srcset="img/image3-tablet.webp, img/image3-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/image3-desk.webp, img/image3-desk@2x.webp 2x">
-                  <source media="(max-width: 769px)" srcset="img/image3-mobile.jpg 1x, img/image3-mobile@2x.jpg 2x">
-
+                  <!--1x: 270px; 2x: 540px-->
+                  <source media="(max-width: 767px)" srcset="img/image3-mobile.jpg 1x, img/image3-mobile@2x.jpg 2x">
+                  <!--1x: 670px; 2x: 1340px-->
                   <source media="(max-width: 1564px)" srcset="img/image3-tablet.jpg 1x, img/image3-tablet@2x.jpg 2x">
+                  <!--1x: 350px; 2x: 700px-->
                   <img src="img/image3-desk.jpg" srcset="img/image3-desk@2x.jpg 2x"
                     alt="Изображение фрагмента системной платы">
                 </picture>
@@ -181,7 +189,7 @@
           <form class="feedback__form" action="#" method="get">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <div class="feedbak__fields">
+            <div class="feedback__fields">
               <label>
                 <input type="text" name="name" id="name" placeholder="Имя" required>
               </label>
@@ -194,7 +202,7 @@
               <button type="submit">Задать вопрос</button>
               <div class="feedback__checkbox">
                 <input class="visually-hidden" type="checkbox" name="approval" id="approval" required checked>
-                <label class="feedback__approval" for="approval">Я согласен на обработку персональных
+                <label for="approval">Я согласен на обработку персональных
                   данных</label>
               </div>
             </div>
@@ -277,7 +285,7 @@
           </div>
           <ul class="footer__contacts">
             <li>
-              <p>г. Мытищи,&nbsp;Олимпийский&nbsp;проспект,<br>д.10</p>
+              <p>г.&nbsp;Мытищи,&nbsp;Олимпийский&nbsp;проспект,<br>д.10</p>
             </li>
             <li>
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -312,7 +320,7 @@
           </label>
           <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
         </div>
-        <button class="modal__button" type="submit">Отправить</button>
+        <button type="submit">Отправить</button>
         <div class="modal__check">
           <input class="visually-hidden" type="checkbox" name="check" id="check" checked required>
           <label for="check">Я согласен на обработку персональных данных</label>
