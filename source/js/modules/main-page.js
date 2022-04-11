@@ -7,7 +7,7 @@ const promoButton = document.querySelector('.promo__button');
 const promoDesctiption = document.querySelector('.promo__description');
 
 const footerPage = document.querySelector('.footer');
-const footerLinks = footerPage.querySelector('.footer__links');
+const footerLinks = footerPage.querySelectorAll('.footer__links');
 const footerContacts = footerPage.querySelector('.footer__contacts');
 const buttonLinks = footerPage.querySelector('.footer__button-links');
 const buttonContacts = footerPage.querySelector('.footer__button-contacts');
@@ -19,11 +19,12 @@ const initPromo = () => {
 };
 
 const initLinksBlock = () => {
-  footerLinks.classList.add('footer__links--close');
+  footerLinks.forEach((item) => {
+    item.classList.add('footer__links--close');
+  });
   buttonLinks.classList.remove('footer__button-links--close');
   buttonLinks.classList.add('footer__button-links--open');
 };
-
 const initContactsBlock = () => {
   footerContacts.classList.add('footer__contacts--close');
   buttonContacts.classList.remove('footer__button-contacts--close');
@@ -50,12 +51,16 @@ const onButtonLinksHendler = () => {
   if (buttonLinks.classList.contains('footer__button-links--open')) {
     buttonLinks.classList.remove('footer__button-links--open');
     buttonLinks.classList.add('footer__button-links--close');
-    footerLinks.classList.remove('footer__links--close');
+    footerLinks.forEach((item) => {
+      item.classList.remove('footer__links--close');
+    });
     initContactsBlock();
   } else {
     buttonLinks.classList.add('footer__button-links--open');
     buttonLinks.classList.remove('footer__button-links--close');
-    footerLinks.classList.add('footer__links--close');
+    footerLinks.forEach((item) => {
+      item.classList.add('footer__links--close');
+    });
   }
 };
 

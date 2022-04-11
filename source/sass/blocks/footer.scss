@@ -1,5 +1,5 @@
 .footer {
-  height: 280px;
+  height: auto;
   padding-top: 45px;
   padding-bottom: 55px;
   background-color: $color-dark;
@@ -72,6 +72,21 @@
   }
 }
 
+.footer__block-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+
+  @include vp-1439 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer__title-links {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
 .footer__block-links h3,
 .footer__block-contacts h3 {
   @include font(15px, 16px, 400, $color-default-white);
@@ -89,7 +104,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  height: 150px;
   margin: 0;
   padding: 0;
   list-style: none;
