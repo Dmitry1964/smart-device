@@ -1,9 +1,10 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import {
-  onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler, initModal,
-  promoButton, buttonLinks, buttonContacts, headerButton, closeModal, modalButtonClose, modalInput
+  onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
+  promoButton, buttonLinks, buttonContacts, headerButton,
 } from './modules/main-page';
+import { modalButtonClose, initModal, onButtonCloseHendler, onInputChange, userPhone } from './popup';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -27,8 +28,14 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   modalButtonClose.addEventListener('click', () => {
-    closeModal();
+    onButtonCloseHendler();
   });
+
+  userPhone.addEventListener('input', () => {
+    onInputChange();
+  })
+
+
 
   // Modules
   // ---------------------------------

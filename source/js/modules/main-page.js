@@ -1,6 +1,7 @@
+import { pageWrapper } from "../popup";
+
 const TEXT_BUTTON_CLOSE = 'Свернуть';
 const TEXT_BUTTON_OPEN = 'Подробнее';
-const pageWrapper = document.querySelector('.wrapper');
 const headerButton = pageWrapper.querySelector('.header__button');
 const promoButton = document.querySelector('.promo__button');
 const promoDesctiption = document.querySelector('.promo__description');
@@ -11,21 +12,6 @@ const footerContacts = footerPage.querySelector('.footer__contacts');
 const buttonLinks = footerPage.querySelector('.footer__button-links');
 const buttonContacts = footerPage.querySelector('.footer__button-contacts');
 
-const modal = document.querySelector('.modal');
-const modalButtonClose = modal.querySelector('.modal__button-close');
-const modalInput = modal.querySelector('input[name="name"]');
-
-const initModal = () => {
-  modal.classList.remove('modal--init');
-  pageWrapper.classList.add('page');
-  modalInput.focus();
-  modalInput.value.clear();
-};
-
-const closeModal = () => {
-  modal.classList.add('modal--init');
-  pageWrapper.classList.remove('page');
-};
 
 const initPromo = () => {
   promoDesctiption.classList.add('promo__description--close');
@@ -87,6 +73,6 @@ const onButtonContactsHendler = () => {
 };
 
 export {
-  onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler, initModal, closeModal,
-  promoButton, buttonLinks, buttonContacts, headerButton, modalButtonClose, modalInput
+  onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
+  promoButton, buttonLinks, buttonContacts, headerButton
 };
