@@ -16,7 +16,6 @@ const onButtonCloseHendler = () => {
 };
 
 const onInputChange = () => {
-  const newArr = [];
   const arr = userPhone.value.split('');
   userPhone.setCustomValidity('');
   if (arr[0] !== '+') {
@@ -34,13 +33,7 @@ const onInputChange = () => {
   if (arr.length === 6) {
     arr.push(')');
   }
-
-  if (arr.length > 3 && arr.length < 6) {
-    newArr.push(arr[3]);
-  }
-
   userPhone.value = arr.join('');
-
   userPhone.reportValidity();
 };
 
