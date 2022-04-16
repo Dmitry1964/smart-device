@@ -1,153 +1,146 @@
 .header__navigation {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 215px 1fr 220px;
   position: fixed;
-  align-items: center;
-  height: 120px;
+  padding-top: 30px;
+  padding-bottom: 35px;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   z-index: 100;
 
-  @include vp-1279 {
-    justify-content: space-between;
+  @include vp-1919 {
+    padding-top: calc(30px - (1920px - 100vw) / (1920 - 770) * (30 - 20));
+    padding-bottom: calc(35px - (1920px - 100vw) / (1920 - 770) * (35 - 25));
   }
-}
 
-.header__logo {
-  display: flex;
-  margin-right: calc(170px - (1920px - 100vw) / (1920 - 770) * (170 - 0));
-}
-
-.header__logo-title {
-  padding-left: 15px;
-}
-
-.header__logo h2 {
-  @include font(25px, 29px, 700, $color-lightgray);
-  margin: 0 0 3px;
-
-  @include vp-767 {
-    display: none;
-  }
-}
-
-.header__logo-title p {
-  @include font(12px, 14px, 500, $color-lightgray);
-  margin: 0;
-
-  @include vp-767 {
-    display: none;
+  @include vp-1023 {
+    grid-template-columns: auto 1fr;
   }
 }
 
 .header__links {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-  list-style: none;
-  padding: 0;
+  justify-content: flex-end;
   margin: 0;
+  padding: 0 165px 0 0;
+  list-style: none;
 
-  @include vp-1279 {
-    justify-content: flex-end;
-    padding-right: 30px;
-    padding-bottom: 12px;
+  @include vp-1919 {
+    padding-right: calc(165px - (1920px - 100vw) / (1920 - 770) * 200);
+  }
+
+  @include vp-1023 {
+    padding-right: 0;
+    padding-top: 10px;
   }
 }
 
-.header__links li {
-  margin-right: calc(125px - (1920px - 100vw) / (1920 - 770) * (125 - 0));
-  padding-bottom: 10px;
+.header__links li:nth-child(2n+1) {
+  padding-right: 125px;
 
-  &:hover {
-    opacity: 0.5;
+  @include vp-1919 {
+    padding-right: calc(125px - (1920px - 100vw) / (1920 - 770) * 160);
   }
 
-  &:last-child {
-    margin: 0;
-  }
-
-  @include vp-1279 {
-    margin-right: 0;
-    padding-left: 40px;
+  @include vp-1023 {
+    padding-right: 25px;
   }
 }
 
 .header__links a {
   display: flex;
-  flex-wrap: wrap;
+  @include font(16pz, 18px, 400, $color-white);
+  font-family: $second-font;
 }
 
 .header__links p {
-  @include font(16px, 18px, 400, $color-lightgray);
-  font-family: $second-font;
-  margin: 0;
-  padding-left: 15px;
 
-  @include vp-1279 {
+  @include vp-1023 {
     display: none;
   }
 }
 
-.header__navigation button {
+.header__links img {
+  margin-right: 15px;
+}
+
+.header__button {
   @include font(14px, 16px, 700, $color-lightgray);
-  text-transform: uppercase;
   letter-spacing: 0.05em;
-  border: 1px solid $color-lightgray;
-  border-radius: 3px;
-  padding: 10px 15px;
-  margin-right: 60px;
-  margin-top: 35px;
+  text-transform: uppercase;
   background-color: transparent;
-  cursor: pointer;
-  align-self: flex-start;
+  width: 160px;
+  height: 40px;
+  padding: 10px 15px;
+  margin: 5px 60px 0 0;
+  border: 1px solid $color-lightgray;
 
-  &:hover {
-    opacity: 0.5;
+  @include vp-1919 {
+    margin-right: calc(60px - (1920px - 100vw) / (1920 - 770) * 60);
   }
 
-  @include vp-1279 {
+  @include vp-1023 {
     display: none;
   }
 }
 
-@media (max-width: $vp-770) {
+@media (max-width: 770px) {
   .header__navigation {
-    height: 100px;
-    padding-top: 0;
+    grid-template-columns: auto 1fr;
+    padding-top: 20px;
+    padding-bottom: 25px;
 
     @include vp-767 {
-      height: calc(100px - (770px - 100vw) / (770 - 320) * (100 - 70));
+      padding-top: calc(20px - (770px - 100vw) / (769 - 320) * (20 - 15));
     }
   }
 
-  .header__logo-image {
+  .header__links {
+    padding-right: 0;
+    padding-top: 10px;
+
     @include vp-767 {
-      width: calc(55px - (770px - 100vw) / (770 - 320) * (55 - 35));
-      height: auto;
+      padding-top: calc(10px - (770px - 100vw) / (769 - 320) * (10 - 5));
     }
+  }
+
+  .header__links li {
+    padding-right: 0;
+
+    &:last-child {
+      margin-right: 15px;
+    }
+
+    &:nth-child(2n+1) {
+      padding-right: 25px;
+    }
+  }
+
+  .header__links p {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
   }
 }
 
-@media (max-width: $vp-320) {
+@media (max-width:320px) {
   .header__navigation {
-    align-items: flex-start;
     padding-top: 15px;
+    padding-bottom: 20px;
   }
 
   .header__links {
     padding-top: 5px;
-    padding-right: 20px;
   }
 
   .header__links li {
-    padding-left: 40px;
+    margin-bottom: 5px;
 
-    &:first-child {
-      padding-left: 0;
+
+    &:last-child {
+      margin-right: 5px;
     }
-  }
-
-  .header__links-image {
-    width: 20px;
   }
 }

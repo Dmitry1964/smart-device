@@ -17,13 +17,10 @@
     <header class="header">
       <nav class="header__navigation container">
         <div class="header__logo">
-          <svg class="header__logo-image" width="55" height="55">
-            <use href="./img/sprite_auto.svg#logo"></use>
-          </svg>
-          <div class="header__logo-title">
-            <h2>Smart Device</h2>
-            <p>умные технологии</p>
-          </div>
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo-mobile.png">
+            <img src="img/logo.png" alt="Логотип">
+          </picture>
         </div>
         <ul class="header__links">
           <li>
@@ -58,10 +55,8 @@
             <li class="features__item">
               <h3>Оперативные сроки</h3>
               <p>
-                Усовершенствованная логистическая система позволяет нам просчитывать стоимость,
-                производить&nbsp;и&nbsp;доставлять
-                заказы плат и комплектующих в самые короткие сроки
-              </p>
+                Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить
+                и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки </p>
             </li>
             <li class="features__item">
               <h3>Крупные поставщики</h3>
@@ -215,32 +210,26 @@
         <section class="footer__block-logo">
           <h2 class="visually-hidden">Логотип и ссылки соцсетей</h2>
           <div class="footer__logo">
-            <svg class="footer__logo-image" width="55" height="55">
-              <use href="./img/sprite_auto.svg#logo"></use>
-            </svg>
-            <div class="footer__logo-title">
-              <h3>Smart Device</h3>
-              <p>умные технологии</p>
-            </div>
+            <img src="img/logo.png" width="215" height="55" alt="Логотип">
           </div>
           <ul class="footer__social">
             <li>
               <a href="#">
-                <svg width="30" height="30">
+                <svg width="40" height="40">
                   <use href="img/sprite_auto.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#">
-                <svg width="30" height="30">
+                <svg width="40" height="40">
                   <use href="img/sprite_auto.svg#icon-odnkl"></use>
                 </svg>
               </a>
             </li>
             <li>
               <a href="#">
-                <svg width="30" height="30">
+                <svg width="40" height="40">
                   <use href="img/sprite_auto.svg#icon-vk"></use>
                 </svg>
               </a>
@@ -315,16 +304,16 @@
         <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
         <div class="modal__fields">
           <label>
-            <input type="text" name="name" id="username" placeholder="Имя" autofocus required>
+            <input type="text" name="name" id="username" placeholder="Имя" autofocus required tabindex="1">
           </label>
           <label>
-            <input type="tel" name="phone" id="userphone" placeholder="Телефон" maxlength="14" required>
+            <input type="tel" name="phone" id="userphone" placeholder="Телефон" maxlength="14" required tabindex="2">
           </label>
-          <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+          <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Ваш вопрос" tabindex="3"></textarea>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit" tabindex="5">Отправить</button>
         <div class="modal__check">
-          <input class="visually-hidden" type="checkbox" name="check" id="check" checked required>
+          <input class="visually-hidden" type="checkbox" name="check" id="check" checked required tabindex="4">
           <label for="check">Я согласен на обработку персональных данных</label>
         </div>
       </form>

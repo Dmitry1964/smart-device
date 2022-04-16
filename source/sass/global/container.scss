@@ -5,10 +5,12 @@
   padding: 0 350px;
 
   @include vp-1919 {
-    padding: 0 calc(350px - (1920px - 100vw) / (1920 - 770) * (350 - 50));
+    padding-left: calc(350px - (1920px - 100vw) / (1920 - 770) * (350 - 50));
+    padding-right: calc(350px - (1920px - 100vw) / (1920 - 770) * (350 - 50));
   }
 
   @include vp-767 {
-    padding: 0 calc(50px - (770px - 100vw) / (770 - 320) * (50 - 25));
+    padding-left: calc(50px - (770px - 100vw) / (770 - 320) * (50 - 25));
+    padding-right: calc(50px - (770px - 100vw) / (770 - 320) * (50 - 25));
   }
 }
