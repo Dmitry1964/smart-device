@@ -61,7 +61,7 @@
   cursor: pointer;
 
   &:hover {
-    opacity: 0.5;
+    background-color: $color-dark-15;
   }
 
   @include vp-767 {

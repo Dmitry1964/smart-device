@@ -48,7 +48,7 @@
   background-color: $color-lightblue;
 
   &:hover {
-    opacity: 0.5;
+    background-color: $color-lightblue-50;
   }
 
   @include vp-1023 {

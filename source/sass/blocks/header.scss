@@ -75,6 +75,7 @@
   padding: 10px 15px;
   margin: 5px 60px 0 0;
   border: 1px solid $color-lightgray;
+  cursor: pointer;
 
   @include vp-1919 {
     margin-right: calc(60px - (1920px - 100vw) / (1920 - 770) * 60);
