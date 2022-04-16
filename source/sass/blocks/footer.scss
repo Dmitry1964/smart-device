@@ -3,10 +3,6 @@
   padding-top: 45px;
   padding-bottom: 55px;
   background-color: $color-dark;
-
-  @include vp-1439 {
-    height: 465px;
-  }
 }
 
 .footer__wrapper {
@@ -14,13 +10,13 @@
   grid-template-columns: 30.73% 1fr 28.27%;
   padding: 0 calc(350px - (1920px - 100vw) / (1920 - 770) * (350 - 50));
 
-  @include vp-1439 {
+  @include vp-1023 {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .footer__block-logo {
-  @include vp-1439 {
+  @include vp-1023 {
     grid-column-start: 1;
     grid-column-end: -1;
     display: flex;

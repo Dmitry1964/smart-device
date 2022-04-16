@@ -87,8 +87,8 @@
             <h2>О компании</h2>
             <div class="promo__description">
               <p>
-                Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
-                1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+                Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии
+                с&nbsp;1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
               </p>
               <p>
                 Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
@@ -121,17 +121,17 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
+                  <source type="image/webp" media="(max-width: 320px)"
                     srcset="img/image1-mobile.webp, img/image1-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1564px)"
+                  <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/image1-tablet.webp, img/image1-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/image1-desk.webp, img/image1-desk@2x.webp 2x">
                   <!--1x: 270px; 2x: 540px-->
-                  <source media="(max-width: 767px)" srcset="img/image1-mobile.jpg 1x, img/image1-mobile@2x.jpg 2x">
+                  <source media="(max-width: 320px)" srcset="img/image1-mobile.jpg 1x, img/image1-mobile@2x.jpg 2x">
                   <!--1x: 670px; 2x: 1340px-->
-                  <source media="(max-width: 1564px)" srcset="img/image1-tablet.jpg 1x, img/image1-tablet@2x.jpg 2x">
+                  <source media="(max-width: 1024px)" srcset="img/image1-tablet.jpg 1x, img/image1-tablet@2x.jpg 2x">
                   <!--1x: 350px; 2x: 700px-->
-                  <img src="img/image1-desk.jpg" srcset="img/image1-desk@2x.jpg 2x"
+                  <img class="catalog__image" src="img/image1-desk.jpg" srcset="img/image1-desk@2x.jpg 2x"
                     alt="Изображение фрагмента системной платы">
                 </picture>
                 <p>Производство печатных плат</p>
@@ -140,9 +140,9 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
+                  <source type="image/webp" media="(max-width: 320px)"
                     srcset="img/image2-mobile.webp, img/image2-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1564px)"
+                  <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/image2-tablet.webp, img/image2-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/image2-desk.webp, img/image2-desk@2x.webp 2x">
                   <!--1x: 270px; 2x: 540px-->
@@ -150,7 +150,7 @@
                   <!--1x: 670px; 2x: 1340px-->
                   <source media="(max-width: 1564px)" srcset="img/image2-tablet.jpg 1x, img/image2-tablet@2x.jpg 2x">
                   <!--1x: 350px; 2x: 700px-->
-                  <img src="img/image2-desk.jpg" srcset="img/image2-desk@2x.jpg 2x"
+                  <img class="catalog__image" src="img/image2-desk.jpg" srcset="img/image2-desk@2x.jpg 2x"
                     alt="Изображение фрагмента системной платы">
                 </picture>
                 <p>Монтаж<br class="catalog__breake"> печатных плат</p>
@@ -159,9 +159,9 @@
             <li class="catalog__item">
               <a href="#">
                 <picture>
-                  <source type="image/webp" media="(max-width: 767px)"
+                  <source type="image/webp" media="(max-width: 320px)"
                     srcset="img/image3-mobile.webp, img/image3-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1564px)"
+                  <source type="image/webp" media="(max-width: 1023px)"
                     srcset="img/image3-tablet.webp, img/image3-tablet@2x.webp 2x">
                   <source type="image/webp" srcset="img/image3-desk.webp, img/image3-desk@2x.webp 2x">
                   <!--1x: 270px; 2x: 540px-->
@@ -169,7 +169,7 @@
                   <!--1x: 670px; 2x: 1340px-->
                   <source media="(max-width: 1564px)" srcset="img/image3-tablet.jpg 1x, img/image3-tablet@2x.jpg 2x">
                   <!--1x: 350px; 2x: 700px-->
-                  <img src="img/image3-desk.jpg" srcset="img/image3-desk@2x.jpg 2x"
+                  <img class="catalog__image" src="img/image3-desk.jpg" srcset="img/image3-desk@2x.jpg 2x"
                     alt="Изображение фрагмента системной платы">
                 </picture>
                 <p>Комплектующие<br class="catalog__breake"> для светотехники</p>
@@ -191,7 +191,7 @@
               <label>
                 <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
               </label>
-              <textarea name="message" cols="70" rows="5" placeholder="Ваш вопрос"></textarea>
+              <textarea name="message" placeholder="Ваш вопрос"></textarea>
             </div>
             <div class="feedback__buttons">
               <button type="submit">Задать вопрос</button>
@@ -276,7 +276,7 @@
           </div>
           <ul class="footer__contacts">
             <li>
-              <p>г.&nbsp;Мытищи,&nbsp;Олимпийский&nbsp;проспект,<br>д.10</p>
+              <p>г.&nbsp;Мытищи,&nbsp;Олимпийский проспект, д.10</p>
             </li>
             <li>
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>
