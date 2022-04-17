@@ -5,6 +5,12 @@ const userName = modal.querySelector('input[name="username"]');
 const userPhone = modal.querySelector('input[name="userphone"]');
 const userForm = document.querySelector('.feedback');
 const userPhoneForm = userForm.querySelector('input[name="phone"]');
+const feedbackForm = modal.querySelector('.feedback__form');
+
+// const focusModal = () => {
+//   feedbackForm.dispatchEvent(new Event('focus'));
+//   focusModal();
+// };
 
 const initModal = () => {
   modal.classList.remove('modal--init');
@@ -39,7 +45,7 @@ const onInputModalChange = () => {
   const newArr = userPhone.value.split('');
   inputChange(arr, newArr);
   userPhone.value = arr.join('');
-}
+};
 
 const inputChange = (arr, newArr) => {
   if (isNaN(newArr.pop())) {
@@ -83,13 +89,15 @@ const onBackSpaceFormHendler = () => {
 const backSpaceHendler = (arr) => {
   if (arr.length > ARR_LENGTH) {
     arr.pop();
-    return arr;
   }
-  return;
+  return arr;
 };
+
+
 
 export {
   modalButtonClose, pageWrapper, userPhone, userPhoneForm, initModal, onButtonCloseHendler, onInputModalChange,
   tabCircus, onInputFormChange, onBackSpaceModalHendler, onBackSpaceFormHendler
+
 };
 

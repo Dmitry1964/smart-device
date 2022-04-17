@@ -31,7 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
     onButtonContactsHendler();
   });
 
-  headerButton.addEventListener('click', () => {
+  headerButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
     initModal();
   });
 
@@ -71,8 +72,6 @@ window.addEventListener('DOMContentLoaded', () => {
       onBackSpaceFormHendler();
     }
   });
-
-
 
   // Modules
   // ---------------------------------
