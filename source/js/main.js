@@ -2,12 +2,14 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import {
   onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
-  promoButton, buttonLinks, buttonContacts, headerButton,
+  promoButton, titleLinks, titleContacts, headerButton
 } from './modules/main-page';
 import {
   modalButtonClose, initModal, onButtonCloseHendler, onInputModalChange, onInputFormChange, userPhone,
   userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler
 } from './popup';
+
+const headerImage = document.querySelector('.header-image');
 
 // ---------------------------------
 
@@ -21,11 +23,11 @@ window.addEventListener('DOMContentLoaded', () => {
     onPromoButtonHendler();
   });
 
-  buttonLinks.addEventListener('click', () => {
+  titleLinks.addEventListener('click', () => {
     onButtonLinksHendler();
   });
 
-  buttonContacts.addEventListener('click', () => {
+  titleContacts.addEventListener('click', () => {
     onButtonContactsHendler();
   });
 
@@ -33,7 +35,18 @@ window.addEventListener('DOMContentLoaded', () => {
     initModal();
   });
 
-  modalButtonClose.addEventListener('click', () => {
+  modalButtonClose.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    onButtonCloseHendler();
+  });
+
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape' || evt.key === 'Esc') {
+      onButtonCloseHendler();
+    }
+  });
+
+  headerImage.addEventListener('click', () => {
     onButtonCloseHendler();
   });
 

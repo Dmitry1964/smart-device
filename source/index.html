@@ -238,10 +238,10 @@
         </section>
         <section class="footer__block-links">
           <h2 class="visually-hidden">Ссылки на разделы сайта</h2>
-          <div class="footer__title-links">
+          <a class="footer__title-links">
             <h3>Разделы сайта</h3>
-            <button class="footer__button-links footer__button-links--close"></button>
-          </div>
+            <div class="footer__button-links footer__button-links--close"></div>
+          </a>
           <ul class="footer__links">
             <li>
               <a href="sitemap.html">О компании</a>
@@ -270,10 +270,10 @@
         </section>
         <section class="footer__block-contacts">
           <h2 class="visually-hidden">Адрес и телефоны</h2>
-          <div class="footer__title-contacts">
+          <a class="footer__title-contacts">
             <h3>Наш офис</h3>
-            <button class="footer__button-contacts footer__button-contacts--close"></button>
-          </div>
+            <div class="footer__button-contacts footer__button-contacts--close"></div>
+          </a>
           <ul class="footer__contacts">
             <li>
               <p>г.&nbsp;Мытищи,&nbsp;Олимпийский проспект, д.10</p>
@@ -296,11 +296,6 @@
   <!-- Модалки -->
   <div class="modal modal--init">
     <div class="modal__wrapper">
-      <button class="modal__button-close">
-        <svg width="20" height="20">
-          <use href="img/sprite_auto.svg#icon-close"></use>
-        </svg>
-      </button>
       <form action="#" method="get">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
@@ -318,6 +313,12 @@
           <input class="visually-hidden" type="checkbox" name="check" id="check" checked required>
           <label for="check">Я согласен на обработку персональных данных</label>
         </div>
+        <button class="modal__button-close">
+          <!-- <img src="img/icon-close.png" width="40" height="40" alt="Кнопка закрыть"> -->
+          <svg width="20" height="20">
+            <use href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
       </form>
     </div>
   </div>

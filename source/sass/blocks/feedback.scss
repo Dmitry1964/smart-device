@@ -131,13 +131,18 @@
   grid-template-columns: 1fr 1fr;
 
   @include vp-767 {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .feedback__buttons button {
   grid-column-start: 1;
   grid-row-start: 1;
+
+  @include vp-767 {
+    order: -1;
+  }
 }
 
 .feedback__form button {
@@ -175,6 +180,7 @@
 
   @include vp-767 {
     padding-left: 30px;
+    align-self: center;
   }
 }
 

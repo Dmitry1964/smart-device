@@ -11,6 +11,8 @@ const footerLinks = footerPage.querySelectorAll('.footer__links');
 const footerContacts = footerPage.querySelector('.footer__contacts');
 const buttonLinks = footerPage.querySelector('.footer__button-links');
 const buttonContacts = footerPage.querySelector('.footer__button-contacts');
+const titleLinks = footerPage.querySelector('.footer__title-links');
+const titleContacts = footerPage.querySelector('.footer__title-contacts');
 
 
 const initPromo = () => {
@@ -79,5 +81,5 @@ const onButtonContactsHendler = () => {
 
 export {
   onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
-  promoButton, buttonLinks, buttonContacts, headerButton
+  promoButton, titleLinks, titleContacts, headerButton
 };
