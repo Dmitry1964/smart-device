@@ -686,15 +686,17 @@ button,
   padding: 40px;
 }
 
-.modal__button-close {
+.modal .modal__button-close {
   position: absolute;
+  width: 40px;
+  height: 40px;
   top: 25px;
   right: 25px;
   cursor: pointer;
-  color: #ffffff;
+  background-color: transparent;
 }
 
-.modal__button-close:hover {
+.modal .modal__button-close:hover {
   opacity: 0.5;
 }
 
@@ -919,7 +921,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 16pz;
+  font-size: 16px;
   line-height: 18px;
   font-weight: 400;
   color: #f8fdff;
@@ -928,6 +930,14 @@ button,
 
 .header__links img {
   margin-right: 15px;
+}
+
+.header__links a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header__links img:hover {
+  opacity: 0.7;
 }
 
 .header__button {
@@ -944,6 +954,10 @@ button,
   margin: 5px 60px 0 0;
   border: 1px solid #f2f5f7;
   cursor: pointer;
+}
+
+.header__button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .features {
@@ -1404,11 +1418,6 @@ button,
   grid-row-start: 1;
 }
 
-.feedback__checkbox {
-  -ms-grid-column: 2;
-  grid-column-start: 2;
-}
-
 .feedback__form button {
   width: 265px;
   padding: 15px 0 12px;
@@ -1429,8 +1438,9 @@ button,
 }
 
 .feedback__checkbox {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
   padding-left: 50px;
-  -ms-flex-item-align: end;
   align-self: flex-end;
   position: relative;
   cursor: pointer;
@@ -1634,6 +1644,10 @@ button,
 
 .footer__contacts li {
   margin-bottom: 5px;
+}
+
+.page {
+  position: fixed;
 }
 
 .page::before {

@@ -50,12 +50,11 @@
 
 .header__links a {
   display: flex;
-  @include font(16pz, 18px, 400, $color-white);
+  @include font(16px, 18px, 400, $color-white);
   font-family: $second-font;
 }
 
 .header__links p {
-
   @include vp-1023 {
     display: none;
   }
@@ -63,6 +62,14 @@
 
 .header__links img {
   margin-right: 15px;
+}
+
+.header__links a:hover {
+  color: $color-whitw-70;
+}
+
+.header__links img:hover {
+  opacity: 0.7;
 }
 
 .header__button {
@@ -83,6 +90,10 @@
 
   @include vp-1023 {
     display: none;
+  }
+
+  &:hover {
+    background-color: $color-whitw-20;
   }
 }
 
@@ -127,7 +138,7 @@
   }
 }
 
-@media (max-width:320px) {
+@media (max-width: 320px) {
   .header__navigation {
     padding-top: 15px;
     padding-bottom: 20px;

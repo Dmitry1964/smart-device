@@ -138,11 +138,6 @@
 .feedback__buttons button {
   grid-column-start: 1;
   grid-row-start: 1;
-
-}
-
-.feedback__checkbox {
-  grid-column-start: 2;
 }
 
 .feedback__form button {
@@ -168,6 +163,7 @@
 }
 
 .feedback__checkbox {
+  grid-column-start: 2;
   padding-left: 50px;
   align-self: flex-end;
   position: relative;

@@ -16,14 +16,17 @@
 
 .modal__wrapper {
   padding: 40px;
+
 }
 
-.modal__button-close {
+.modal .modal__button-close {
   position: absolute;
+  width: 40px;
+  height: 40px;
   top: 25px;
   right: 25px;
   cursor: pointer;
-  color: $color-default-white;
+  background-color: transparent;
 
   &:hover {
     opacity: 0.5;

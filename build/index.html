@@ -189,7 +189,7 @@
                 <input type="text" name="name" id="name" placeholder="Имя" required>
               </label>
               <label>
-                <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон" required maxlength="18">
               </label>
               <textarea name="message" placeholder="Ваш вопрос"></textarea>
             </div>
@@ -296,18 +296,20 @@
   <!-- Модалки -->
   <div class="modal modal--init">
     <div class="modal__wrapper">
-      <svg class="modal__button-close" width="20" height="20">
-        <use href="img/sprite_auto.svg#icon-close"></use>
-      </svg>
+      <button class="modal__button-close">
+        <svg width="20" height="20">
+          <use href="img/sprite_auto.svg#icon-close"></use>
+        </svg>
+      </button>
       <form action="#" method="get">
         <h2>Закажите звонок</h2>
         <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
         <div class="modal__fields">
           <label>
-            <input type="text" name="name" id="username" placeholder="Имя" autofocus required>
+            <input type="text" name="username" id="username" placeholder="Имя" autofocus required>
           </label>
           <label>
-            <input type="tel" name="phone" id="userphone" placeholder="Телефон" maxlength="14" required>
+            <input type="tel" name="userphone" id="userphone" placeholder="Телефон" maxlength="18" required>
           </label>
           <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
         </div>

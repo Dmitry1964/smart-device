@@ -4,7 +4,11 @@ import {
   onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
   promoButton, buttonLinks, buttonContacts, headerButton,
 } from './modules/main-page';
-import { modalButtonClose, initModal, onButtonCloseHendler, onInputChange, userPhone } from './popup';
+import {
+  modalButtonClose, initModal, onButtonCloseHendler, onInputModalChange, onInputFormChange, userPhone,
+  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler
+} from './popup';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -16,9 +20,11 @@ window.addEventListener('DOMContentLoaded', () => {
   promoButton.addEventListener('click', () => {
     onPromoButtonHendler();
   });
+
   buttonLinks.addEventListener('click', () => {
     onButtonLinksHendler();
   });
+
   buttonContacts.addEventListener('click', () => {
     onButtonContactsHendler();
   });
@@ -32,8 +38,26 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   userPhone.addEventListener('input', () => {
-    onInputChange();
-  })
+    onInputModalChange();
+  });
+
+  userPhoneForm.addEventListener('input', () => {
+    onInputFormChange();
+  });
+
+  userPhone.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Backspace') {
+      evt.preventDefault();
+      onBackSpaceModalHendler();
+    }
+  });
+
+  userPhoneForm.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Backspace') {
+      evt.preventDefault();
+      onBackSpaceFormHendler();
+    }
+  });
 
 
 
