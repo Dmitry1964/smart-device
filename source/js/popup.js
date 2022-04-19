@@ -1,5 +1,6 @@
 const pageWrapper = document.querySelector('.wrapper');
 const modal = document.querySelector('.modal');
+const modalForm = modal.querySelector('form');
 const modalButtonClose = modal.querySelector('.modal__button-close');
 const userName = modal.querySelector('input[name="username"]');
 const userPhone = modal.querySelector('input[name="userphone"]');
@@ -88,11 +89,8 @@ const backSpaceHendler = (arr) => {
   return arr;
 };
 
-
-
-
 export {
-  modalButtonClose, pageWrapper, userPhone, userPhoneForm, modal, initModal, onButtonCloseHendler, onInputModalChange,
+  modalButtonClose, pageWrapper, userPhone, userPhoneForm, modal, modalForm, initModal, onButtonCloseHendler, onInputModalChange,
   tabCircus, onInputFormChange, onBackSpaceModalHendler, onBackSpaceFormHendler
 
 };

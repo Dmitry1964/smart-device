@@ -6,15 +6,12 @@ import {
 } from './modules/main-page';
 import {
   modalButtonClose, initModal, onButtonCloseHendler, onInputModalChange, onInputFormChange, userPhone,
-  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler, modal
+  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler, modal, modalForm
 } from './popup';
 
-
-const headerImage = document.querySelector('.header-image');
 const { createFocusTrap } = require('focus-trap');
 
 const focusTrap = createFocusTrap(modal);
-
 
 
 // ---------------------------------
@@ -58,11 +55,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape' || evt.key === 'Esc') {
-      focusTrap.deactivate;
+      focusTrap.deactivate();
     }
   });
 
-  headerImage.addEventListener('click', onButtonCloseHendler);
+  modal.addEventListener('click', (evt) => {
+
+    if (evt.target === document.querySelector('.modal__wrapper')) {
+      onButtonCloseHendler();
+      focusTrap.deactivate()
+    }
+  });
 
   userPhone.addEventListener('input', () => {
     onInputModalChange();
