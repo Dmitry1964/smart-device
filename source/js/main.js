@@ -6,10 +6,16 @@ import {
 } from './modules/main-page';
 import {
   modalButtonClose, initModal, onButtonCloseHendler, onInputModalChange, onInputFormChange, userPhone,
-  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler
+  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler, modal
 } from './popup';
 
+
 const headerImage = document.querySelector('.header-image');
+const { createFocusTrap } = require('focus-trap');
+
+const focusTrap = createFocusTrap(modal);
+
+
 
 // ---------------------------------
 
@@ -31,15 +37,18 @@ window.addEventListener('DOMContentLoaded', () => {
     onButtonContactsHendler();
   });
 
+
   headerButton.addEventListener('click', (evt) => {
     evt.preventDefault();
     initModal();
   });
+  headerButton.addEventListener('click', focusTrap.activate);
 
   modalButtonClose.addEventListener('click', (evt) => {
     evt.preventDefault();
     onButtonCloseHendler();
   });
+  modalButtonClose.addEventListener('click', focusTrap.deactivate);
 
   document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape' || evt.key === 'Esc') {
@@ -47,9 +56,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  headerImage.addEventListener('click', () => {
-    onButtonCloseHendler();
+  document.addEventListener('keydown', (evt) => {
+    if (evt.key === 'Escape' || evt.key === 'Esc') {
+      focusTrap.deactivate;
+    }
   });
+
+  headerImage.addEventListener('click', onButtonCloseHendler);
 
   userPhone.addEventListener('input', () => {
     onInputModalChange();
