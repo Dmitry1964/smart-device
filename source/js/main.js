@@ -114,6 +114,16 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+const wrapperPage = document.querySelector('.wrapper');
+const setPosition = () => {
+  if (window.innerHeight < 760) {
+    wrapperPage.style.position = 'static';
+    modal.style.position = 'absolute';
+  }
+};
+
+window.addEventListener('resize', setPosition);
+
 // ---------------------------------
 
 // ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
