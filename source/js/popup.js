@@ -89,9 +89,13 @@ const backSpaceHendler = (arr) => {
   return arr;
 };
 
+const setInvalidField = (phone) => {
+  phone.style.border = '2px solid red';
+}
+
 export {
-  modalButtonClose, pageWrapper, userPhone, userPhoneForm, modal, modalForm, initModal, onButtonCloseHendler, onInputModalChange,
-  tabCircus, onInputFormChange, onBackSpaceModalHendler, onBackSpaceFormHendler
+  modalButtonClose, pageWrapper, userPhone, userPhoneForm, modal, modalForm, userForm, initModal, onButtonCloseHendler, onInputModalChange,
+  tabCircus, onInputFormChange, onBackSpaceModalHendler, onBackSpaceFormHendler, setInvalidField
 
 };
 

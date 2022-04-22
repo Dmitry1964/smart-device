@@ -6,7 +6,7 @@ import {
 } from './modules/main-page';
 import {
   modalButtonClose, initModal, onButtonCloseHendler, onInputModalChange, onInputFormChange, userPhone,
-  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler, modal, modalForm
+  userPhoneForm, onBackSpaceModalHendler, onBackSpaceFormHendler, modal, modalForm, setInvalidField, userForm
 } from './popup';
 
 const { createFocusTrap } = require('focus-trap');
@@ -60,10 +60,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   modal.addEventListener('click', (evt) => {
-
     if (evt.target === document.querySelector('.modal__wrapper')) {
       onButtonCloseHendler();
-      focusTrap.deactivate()
+      focusTrap.deactivate();
     }
   });
 
@@ -88,6 +87,21 @@ window.addEventListener('DOMContentLoaded', () => {
       onBackSpaceFormHendler();
     }
   });
+
+  modalForm.addEventListener('submit', (evt) => {
+    if (userPhone.value.split('').length < 18) {
+      evt.preventDefault();
+      setInvalidField(userPhone);
+    }
+  });
+
+  userForm.addEventListener('submit', (evt) => {
+    if (userPhoneForm.value.split('').length < 18) {
+      evt.preventDefault();
+      setInvalidField(userPhoneForm);
+    }
+  });
+
 
   // Modules
   // ---------------------------------

@@ -26,8 +26,9 @@
 
 .feedback__wrapper img {
   z-index: 20;
+  width: calc(510px - (1920px - 100vw) / (1920 - 1024) * (520 - 300));
 
-  @include vp-1439 {
+  @include vp-1023 {
     display: none;
   }
 }
@@ -37,7 +38,7 @@
   padding-right: 10px;
   z-index: 50;
 
-  @include vp-1439 {
+  @include vp-1919 {
     padding-left: calc(120px - (1920px - 100vw) / (1920 - 770) * 120);
     padding-right: 0;
   }
@@ -139,6 +140,7 @@
 .feedback__buttons button {
   grid-column-start: 1;
   grid-row-start: 1;
+  user-select: none;
 
   @include vp-767 {
     order: -1;

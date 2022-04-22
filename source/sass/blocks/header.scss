@@ -1,7 +1,19 @@
 .header__navigation {
   display: grid;
   grid-template-columns: 215px 1fr 220px;
+
+  @include vp-1919 {
+    grid-template-columns: 215px 1fr calc(220px - (1920px - 100vw) / (1920 - 1024) * (220 - 160));
+  }
+
   position: fixed;
+  top: 0;
+  left: calc(50% - 1920px/2);
+
+  @include vp-1919 {
+    left: 0;
+  }
+
   padding-top: 30px;
   padding-bottom: 35px;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -27,7 +39,7 @@
   list-style: none;
 
   @include vp-1919 {
-    padding-right: calc(165px - (1920px - 100vw) / (1920 - 770) * 200);
+    padding-right: calc(165px - (1920px - 100vw) / (1920 - 770) * 180);
   }
 
   @include vp-1023 {
@@ -40,7 +52,7 @@
   padding-right: 125px;
 
   @include vp-1919 {
-    padding-right: calc(125px - (1920px - 100vw) / (1920 - 770) * 160);
+    padding-right: calc(125px - (1920px - 100vw) / (1920 - 770) * 120);
   }
 
   @include vp-1023 {
@@ -83,6 +95,7 @@
   margin: 5px 60px 0 0;
   border: 1px solid $color-lightgray;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1919 {
     margin-right: calc(60px - (1920px - 100vw) / (1920 - 770) * 60);

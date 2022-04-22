@@ -893,6 +893,8 @@ button,
   -ms-grid-columns: 215px 1fr 220px;
   grid-template-columns: 215px 1fr 220px;
   position: fixed;
+  top: 0;
+  left: calc(50% - 1920px/2);
   padding-top: 30px;
   padding-bottom: 35px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
@@ -956,6 +958,10 @@ button,
   margin: 5px 60px 0 0;
   border: 1px solid #f2f5f7;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header__button:hover {
@@ -1000,19 +1006,19 @@ button,
   background-color: #00b2ff;
 }
 
-.features__item:nth-child(5n+1) {
+.features__item:nth-child(4n+1) {
   background-image: url("../img/svg/stopwatch.svg");
 }
 
-.features__item:nth-child(5n+2) {
+.features__item:nth-child(4n+2) {
   background-image: url("../img/svg/hired.svg");
 }
 
-.features__item:nth-child(5n+3) {
+.features__item:nth-child(4n+3) {
   background-image: url("../img/svg/detective.svg");
 }
 
-.features__item:nth-child(5n+4) {
+.features__item:nth-child(4n+4) {
   background-image: url("../img/svg/tag.svg");
 }
 
@@ -1114,6 +1120,10 @@ button,
   border: 1px solid #00b2ff;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .promo__button:hover {
@@ -1214,7 +1224,7 @@ button,
 }
 
 .header-image__title {
-  padding-left: calc(475px - (1920px - 100vw) / (1920 - 770) * (475 - 50));
+  padding-left: 475px;
 }
 
 .header-image__title h2 {
@@ -1246,6 +1256,11 @@ button,
   text-transform: uppercase;
   padding: 18px 25px;
   background-color: #00b2ff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: inline-block;
 }
 
 .header-image__link:hover {
@@ -1281,6 +1296,7 @@ button,
 
 .feedback__wrapper img {
   z-index: 20;
+  width: calc(510px - (1920px - 100vw) / (1920 - 1024) * (520 - 300));
 }
 
 .feedback__form {
@@ -1429,6 +1445,10 @@ button,
   grid-column-start: 1;
   -ms-grid-row: 1;
   grid-row-start: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .feedback__form button {
@@ -1701,42 +1721,47 @@ button,
   }
 
   .header__navigation {
+    -ms-grid-columns: 215px 1fr calc(220px - (1920px - 100vw) / (1920 - 1024) * (220 - 160));
+    grid-template-columns: 215px 1fr calc(220px - (1920px - 100vw) / (1920 - 1024) * (220 - 160));
+  }
+
+  .header__navigation {
+    left: 0;
+  }
+
+  .header__navigation {
     padding-top: calc(30px - (1920px - 100vw) / (1920 - 770) * (30 - 20));
     padding-bottom: calc(35px - (1920px - 100vw) / (1920 - 770) * (35 - 25));
   }
 
   .header__links {
-    padding-right: calc(165px - (1920px - 100vw) / (1920 - 770) * 200);
+    padding-right: calc(165px - (1920px - 100vw) / (1920 - 770) * 180);
   }
 
   .header__links li:nth-child(2n+1) {
-    padding-right: calc(125px - (1920px - 100vw) / (1920 - 770) * 160);
+    padding-right: calc(125px - (1920px - 100vw) / (1920 - 770) * 120);
   }
 
   .header__button {
     margin-right: calc(60px - (1920px - 100vw) / (1920 - 770) * 60);
   }
 
+  .header-image__title {
+    padding-left: calc(475px - (1920px - 100vw) / (1920 - 770) * (475 - 50));
+  }
+
   .header-image__title h2 {
     font-size: calc(80px - (1920px - 100vw) / (1920 - 770) * (80 - 64));
     line-height: calc(94px - (1920px - 100vw) / (1920 - 770) * (94 - 75));
-  }
-}
-
-@media (max-width: 1439px) {
-  .promo__description--close {
-    height: 275px;
-  }
-
-  .feedback__wrapper img {
-    display: none;
   }
 
   .feedback__form {
     padding-left: calc(120px - (1920px - 100vw) / (1920 - 770) * 120);
     padding-right: 0;
   }
+}
 
+@media (max-width: 1439px) {
   .feedback__form p {
     margin: 0 0 25px;
   }
@@ -1776,10 +1801,6 @@ button,
 }
 
 @media (max-width: 1279px) {
-  .promo__description--close {
-    height: 260px;
-  }
-
   .header-image__title p {
     width: 670px;
     margin-bottom: 73px;
@@ -1826,6 +1847,10 @@ button,
 
   .feedback {
     background-image: none;
+  }
+
+  .feedback__wrapper img {
+    display: none;
   }
 
   .footer__wrapper {
