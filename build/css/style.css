@@ -1006,20 +1006,11 @@ button,
   background-color: #00b2ff;
 }
 
-.features__item:nth-child(4n+1) {
-  background-image: url("../img/svg/stopwatch.svg");
-}
-
-.features__item:nth-child(4n+2) {
-  background-image: url("../img/svg/hired.svg");
-}
-
-.features__item:nth-child(4n+3) {
-  background-image: url("../img/svg/detective.svg");
-}
-
-.features__item:nth-child(4n+4) {
-  background-image: url("../img/svg/tag.svg");
+.features__item .features__item-image {
+  color: #00b2ff;
+  position: absolute;
+  top: 40px;
+  left: 40px;
 }
 
 .features__item:hover::before {
@@ -1028,22 +1019,6 @@ button,
   -webkit-transition: width 0.3s;
   -o-transition: width 0.3s;
   transition: width 0.3s;
-}
-
-.features__item:hover:nth-child(5n+1) {
-  background-image: url("../img/svg/stopwatch-hover.svg");
-}
-
-.features__item:hover:nth-child(5n+2) {
-  background-image: url("../img/svg/hired-hover.svg");
-}
-
-.features__item:hover:nth-child(5n+3) {
-  background-image: url("../img/svg/detective-hover.svg");
-}
-
-.features__item:hover:nth-child(5n+4) {
-  background-image: url("../img/svg/tag-hover.svg");
 }
 
 .features__item h3 {
@@ -1055,7 +1030,8 @@ button,
 }
 
 .features__item:hover h3,
-.features__item:hover p {
+.features__item:hover p,
+.features__item:hover .features__item-image {
   color: #f2f5f7;
 }
 
@@ -2215,6 +2191,11 @@ button,
   .container {
     padding-left: calc(50px - (770px - 100vw) / (770 - 320) * (50 - 25));
     padding-right: calc(50px - (770px - 100vw) / (770 - 320) * (50 - 25));
+  }
+
+  .features__item .features__item-image {
+    top: calc(40px - (770px - 100vw) / (770 - 320) * (40 - 25));
+    left: calc(40px - (770px - 100vw) / (770 - 320) * (40 - 25));
   }
 
   .promo__content {

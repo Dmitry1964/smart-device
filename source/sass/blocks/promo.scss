@@ -24,15 +24,6 @@
 .promo__description {
   margin-bottom: calc(42px - (1920px - 100vw) / (1920 - 770) * 42);
   min-height: 150px;
-
-  @include vp-1023 {
-    // margin-bottom: 20px;
-  }
-
-  // @include vp-767 {
-  //   height: 210px;
-  //   // overflow: hidden;
-  // }
 }
 
 .promo__description--close {}
