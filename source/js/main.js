@@ -2,7 +2,7 @@ import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import {
   onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
-  promoButton, titleLinks, titleContacts, headerButton
+  promoButton, titleLinks, titleContacts, headerButton, setHiddenSpan,
 } from './modules/main-page';
 import {
   modalButtonClose, initModal, onButtonCloseHendler, onInputModalChange, onInputFormChange, userPhone,
@@ -38,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
   headerButton.addEventListener('click', (evt) => {
     evt.preventDefault();
     initModal();
+    setPosition();
   });
   headerButton.addEventListener('click', focusTrap.activate);
 
@@ -114,15 +115,20 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const wrapperPage = document.querySelector('.wrapper');
 const setPosition = () => {
   if (window.innerHeight < 760) {
-    wrapperPage.style.position = 'static';
-    modal.style.position = 'absolute';
+    modal.style.position = 'relative';
+  }
+
+  if (window.innerHeight >= 760) {
+    modal.style.position = 'fixed';
   }
 };
 
-window.addEventListener('resize', setPosition);
+window.addEventListener('resize', () => {
+  setPosition();
+  setHiddenSpan();
+});
 
 // ---------------------------------
 

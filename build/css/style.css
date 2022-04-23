@@ -953,7 +953,7 @@ button,
   text-transform: uppercase;
   background-color: transparent;
   width: 160px;
-  height: 40px;
+  min-height: 40px;
   padding: 10px 15px;
   margin: 5px 60px 0 0;
   border: 1px solid #f2f5f7;
@@ -1090,11 +1090,7 @@ button,
 
 .promo__description {
   margin-bottom: calc(42px - (1920px - 100vw) / (1920 - 770) * 42);
-}
-
-.promo__description--close {
-  height: 150px;
-  overflow: hidden;
+  min-height: 150px;
 }
 
 .promo__description p {
@@ -1131,7 +1127,7 @@ button,
 }
 
 .catalog {
-  padding-top: calc(65px - (1920px - 100vw) / (1920 - 770) * (65 - 50));
+  padding-top: calc(60px - (1920px - 100vw) / (1920 - 770) * (60 - 60));
   padding-bottom: calc(114px - (1920px - 100vw) / (1920 - 770) * (114 - 45));
   background-color: #041427;
 }
@@ -1141,7 +1137,7 @@ button,
   line-height: 51px;
   font-weight: 400;
   color: #ffffff;
-  margin: 0 0 calc(50px - (1920px - 100vw) / (1920 - 770) * (50 - 40));
+  margin: 0 0 calc(50px - (1920px - 100vw) / (1920 - 770) * (50 - 35));
 }
 
 .catalog__image {
@@ -1244,7 +1240,7 @@ button,
   color: #f2f5f7;
   letter-spacing: 0.12em;
   width: 600px;
-  margin: 0 0 63px;
+  margin: 0 0 43px;
 }
 
 .header-image__link {
@@ -1274,7 +1270,7 @@ button,
 .feedback {
   background-image: url("../img/background-feedback.jpg");
   background-size: cover;
-  padding-top: calc(160px - (1920px - 100vw) / (1920 - 770) * (160 - 44));
+  padding-top: calc(165px - (1920px - 100vw) / (1920 - 770) * (165 - 44));
   padding-bottom: calc(250px - (1920px - 100vw) / (1920 - 770) * (250 - 125));
   background-color: #00b2ff;
   background-repeat: no-repeat;
@@ -1524,7 +1520,7 @@ button,
 
 .footer {
   height: auto;
-  padding-top: 45px;
+  padding-top: 50px;
   padding-bottom: 55px;
   background-color: #041427;
 }
@@ -1756,22 +1752,22 @@ button,
   }
 
   .feedback__form {
-    padding-left: calc(120px - (1920px - 100vw) / (1920 - 770) * 120);
+    padding-left: calc(120px - (1920px - 100vw) / (1920 - 1024) * (120 - 20));
     padding-right: 0;
+  }
+
+  .feedback__fields input {
+    width: calc(275px - (1919px - 100vw) / (1919 - 1024) * (275 - 260));
+  }
+
+  .feedback__fields textarea {
+    width: 100%;
   }
 }
 
 @media (max-width: 1439px) {
   .feedback__form p {
     margin: 0 0 25px;
-  }
-
-  .feedback__fields input {
-    width: 320px;
-  }
-
-  .feedback__fields textarea {
-    width: 100%;
   }
 
   .feedback__checkbox {
@@ -1803,7 +1799,7 @@ button,
 @media (max-width: 1279px) {
   .header-image__title p {
     width: 670px;
-    margin-bottom: 73px;
+    margin-bottom: 57px;
   }
 }
 
@@ -1851,6 +1847,11 @@ button,
 
   .feedback__wrapper img {
     display: none;
+  }
+
+  .feedback__fields input {
+    width: 320px;
+    margin-bottom: 20px;
   }
 
   .footer__wrapper {
@@ -1938,6 +1939,10 @@ button,
     padding-bottom: 30px;
   }
 
+  .promo__description {
+    min-height: 255px;
+  }
+
   .promo__content h2 {
     margin-bottom: 12px;
   }
@@ -1948,14 +1953,6 @@ button,
 
   .promo__description p:nth-of-type(n+2) {
     margin-bottom: 15px;
-  }
-
-  .promo__description {
-    margin: 0;
-  }
-
-  .promo__button {
-    margin-top: 18px;
   }
 
   .catalog__breake {
@@ -2009,6 +2006,10 @@ button,
   .features__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+  }
+
+  .promo__description {
+    min-height: 200px;
   }
 
   .promo__content h2 {
@@ -2222,10 +2223,6 @@ button,
     height: auto;
   }
 
-  .promo__description--close {
-    height: 210px;
-  }
-
   .promo__button {
     width: 160px;
     margin-top: 15px;
@@ -2268,7 +2265,6 @@ button,
 
   .feedback__fields input {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   .feedback__buttons {

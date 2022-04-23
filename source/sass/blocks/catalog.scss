@@ -1,12 +1,12 @@
 .catalog {
-  padding-top: calc(65px - (1920px - 100vw) / (1920 - 770) * (65 - 50));
+  padding-top: calc(60px - (1920px - 100vw) / (1920 - 770) * (60 - 60));
   padding-bottom: calc(114px - (1920px - 100vw) / (1920 - 770) * (114 - 45));
   background-color: $color-dark;
 }
 
 .catalog__title {
   @include font(36px, 51px, 400, $color-default-white);
-  margin: 0 0 calc(50px - (1920px - 100vw) / (1920 - 770) * (50 - 40));
+  margin: 0 0 calc(50px - (1920px - 100vw) / (1920 - 770) * (50 - 35));
 }
 
 .catalog__image {

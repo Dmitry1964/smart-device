@@ -5,6 +5,8 @@ const TEXT_BUTTON_OPEN = 'Подробнее';
 const headerButton = pageWrapper.querySelector('.header__button');
 const promoButton = document.querySelector('.promo__button');
 const promoDesctiption = document.querySelector('.promo__description');
+const promoDesctiptionPar = promoDesctiption.querySelectorAll('p');
+const promoDesctiptionSpan = promoDesctiption.querySelector('span');
 
 const footerPage = document.querySelector('.footer');
 const footerLinks = footerPage.querySelectorAll('.footer__links');
@@ -14,10 +16,15 @@ const buttonContacts = footerPage.querySelector('.footer__button-contacts');
 const titleLinks = footerPage.querySelector('.footer__title-links');
 const titleContacts = footerPage.querySelector('.footer__title-contacts');
 
+console.log(promoDesctiptionPar);
+
 
 const initPromo = () => {
   promoDesctiption.classList.add('promo__description--close');
   promoButton.textContent = TEXT_BUTTON_OPEN;
+  for (let i = 2; i <= promoDesctiptionPar.length; i++) {
+    promoDesctiptionPar[i].classList.add('visually-hidden');
+  }
 };
 
 const initLinksBlock = () => {
@@ -43,9 +50,16 @@ const onPromoButtonHendler = () => {
   if (promoDesctiption.classList.contains('promo__description--close')) {
     promoDesctiption.classList.remove('promo__description--close');
     promoButton.textContent = TEXT_BUTTON_CLOSE;
+    for (let i = 2; i <= promoDesctiptionPar.length; i++) {
+      promoDesctiptionPar[i].classList.remove('visually-hidden');
+    }
   } else {
     promoDesctiption.classList.add('promo__description--close');
     promoButton.textContent = TEXT_BUTTON_OPEN;
+    for (let i = 2; i <= promoDesctiptionPar.length; i++) {
+      promoDesctiptionPar[i].classList.add('visually-hidden');
+    }
+
   }
 };
 
@@ -79,7 +93,16 @@ const onButtonContactsHendler = () => {
   }
 };
 
+const setHiddenSpan = () => {
+  if (window.innerWidth <= 767) {
+    promoDesctiptionSpan.classList.add('visually-hidden');
+  } else {
+    promoDesctiptionSpan.classList.remove('visually-hidden');
+  }
+
+}
+
 export {
-  onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler,
+  onPromoButtonHendler, initPage, onButtonLinksHendler, onButtonContactsHendler, setHiddenSpan,
   promoButton, titleLinks, titleContacts, headerButton
 };
