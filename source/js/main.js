@@ -45,8 +45,9 @@ window.addEventListener('DOMContentLoaded', () => {
   modalButtonClose.addEventListener('click', (evt) => {
     evt.preventDefault();
     onButtonCloseHendler();
+    focusTrap.deactivate();
   });
-  modalButtonClose.addEventListener('click', focusTrap.deactivate);
+  // modalButtonClose.addEventListener('click', focusTrap.deactivate);
 
   document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape' || evt.key === 'Esc') {
@@ -117,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const setPosition = () => {
   if (window.innerHeight < 760) {
-    modal.style.position = 'relative';
+    modal.style.position = 'absolute';
   }
 
   if (window.innerHeight >= 760) {
